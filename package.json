@@ -1,13 +1,14 @@
 {
-  "name": "V14-handler",
-  "version": "1.0.0",
-  "description": "A command & eventhandler for Discord.js V14",
+  "name": "McData",
+  "version": "3.0.0",
+  "description": "Minecraft data, in Discord.",
   "main": "./src/index.js",
-  "repository": "https://github.com/Fyxren/Discord.js-V14-Handler",
+  "repository": "https://github.com/McData-Development/Discord-Client",
   "author": "Fyxren",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js"
   },
   "dependencies": {
     "@discordjs/rest": "^1.1.0",
