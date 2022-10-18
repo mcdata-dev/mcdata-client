@@ -25,6 +25,9 @@ module.exports = {
                     title: `Item | ${data.name}`,
                     description: `\`${data.text_type}\``,
                     color: client.c.main,
+                    thumbnail: {
+                        url: client.config.logo
+                    },
                     fields: [
                         {
                             name: 'ID',
