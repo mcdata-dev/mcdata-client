@@ -7,6 +7,7 @@ client.commands = new Collection();
 client.embeds = require('./data/config/embeds');
 client.e = require('./data/config/emotes');
 client.c = require('./data/config/colors');
+client.config = require('./data/config/config');
 
 module.exports = client;
 
