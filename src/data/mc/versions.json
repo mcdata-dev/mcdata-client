@@ -1,0 +1,484 @@
+{
+    "updated": {
+        "date": "2022-02-10",
+        "majorVersion": "1.18"
+    },
+    "data": [
+        {
+            "version": "1.0",
+            "major": "1.0",
+            "majorName": "Adventure Update",
+            "release": "November 18, 2011"
+        },
+        {
+            "version": "1.1",
+            "major": "1.1",
+            "majorName": "1.1",
+            "release": "January 12, 2012"
+        },
+        {
+            "version": "1.2.1",
+            "major": "1.2",
+            "majorName": "1.2",
+            "release": "March 1, 2012"
+        },
+        {
+            "version": "1.2.2",
+            "major": "1.2",
+            "majorName": "1.2",
+            "release": "March 1, 2012"
+        },
+        {
+            "version": "1.2.3",
+            "major": "1.2",
+            "majorName": "1.2",
+            "release": "March 2, 2012"
+        },
+        {
+            "version": "1.2.4",
+            "major": "1.2",
+            "majorName": "1.2",
+            "release": "March 22, 2012"
+        },
+        {
+            "version": "1.2.5",
+            "major": "1.2",
+            "majorName": "1.2",
+            "release": "April 4, 2012"
+        },
+        {
+            "version": "1.3.1",
+            "major": "1.3",
+            "majorName": "1.3",
+            "release": "August 1, 2012"
+        },
+        {
+            "version": "1.3.2",
+            "major": "1.3",
+            "majorName": "1.3",
+            "release": "August 16, 2012"
+        },
+        {
+            "version": "1.4.2",
+            "major": "1.4",
+            "majorName": "Pretty Scary Update",
+            "release": "October 25, 2012"
+        },
+        {
+            "version": "1.4.4",
+            "major": "1.4",
+            "majorName": "Pretty Scary Update",
+            "release": "November 14, 2012"
+        },
+        {
+            "version": "1.4.5",
+            "major": "1.4",
+            "majorName": "Pretty Scary Update",
+            "release": "November 20, 2012"
+        },
+        {
+            "version": "1.4.6",
+            "major": "1.4",
+            "majorName": "Pretty Scary Update",
+            "release": "December 20, 2012"
+        },
+        {
+            "version": "1.4.7",
+            "major": "1.4",
+            "majorName": "Pretty Scary Update",
+            "release": "January 9, 2013"
+        },
+        {
+            "version": "1.5",
+            "major": "1.5",
+            "majorName": "Redstone Update",
+            "release": "March 13, 2013"
+        },
+        {
+            "version": "1.5.1",
+            "major": "1.5",
+            "majorName": "Redstone Update",
+            "release": "March 21, 2013"
+        },
+        {
+            "version": "1.5.2",
+            "major": "1.5",
+            "majorName": "Redstone Update",
+            "release": "May 2, 2013"
+        },
+        {
+            "version": "1.6.1",
+            "major": "1.6",
+            "majorName": "Horse Update",
+            "release": "July 1, 2013"
+        },
+        {
+            "version": "1.6.2",
+            "major": "1.6",
+            "majorName": "Horse Update",
+            "release": "July 8, 2013"
+        },
+        {
+            "version": "1.6.4",
+            "major": "1.6",
+            "majorName": "Horse Update",
+            "release": "September 19, 2013"
+        },
+        {
+            "version": "1.7.2",
+            "major": "1.7",
+            "majorName": "The Update that Changed the World",
+            "release": "June 26, 2014"
+        },
+        {
+            "version": "1.7.4",
+            "major": "1.7",
+            "majorName": "The Update that Changed the World",
+            "release": "June 26, 2014"
+        },
+        {
+            "version": "1.7.5",
+            "major": "1.7",
+            "majorName": "The Update that Changed the World",
+            "release": "June 26, 2014"
+        },
+        {
+            "version": "1.7.6",
+            "major": "1.7",
+            "majorName": "The Update that Changed the World",
+            "release": "June 26, 2014"
+        },
+        {
+            "version": "1.7.7",
+            "major": "1.7",
+            "majorName": "The Update that Changed the World",
+            "release": "June 26, 2014"
+        },
+        {
+            "version": "1.7.8",
+            "major": "1.7",
+            "majorName": "The Update that Changed the World",
+            "release": "June 26, 2014"
+        },
+        {
+            "version": "1.7.9",
+            "major": "1.7",
+            "majorName": "The Update that Changed the World",
+            "release": "June 26, 2014"
+        },
+        {
+            "version": "1.7.10",
+            "major": "1.7",
+            "majorName": "The Update that Changed the World",
+            "release": "June 26, 2014"
+        },
+        {
+            "version": "1.8",
+            "major": "1.8",
+            "majorName": "Bountiful Update",
+            "release": "September 2, 2014"
+        },
+        {
+            "version": "1.8.1",
+            "major": "1.8",
+            "majorName": "Bountiful Update",
+            "release": "November 24, 2014"
+        },
+        {
+            "version": "1.8.2",
+            "major": "1.8",
+            "majorName": "Bountiful Update",
+            "release": "February 19, 2015"
+        },
+        {
+            "version": "1.8.3",
+            "major": "1.8",
+            "majorName": "Bountiful Update",
+            "release": "February 20, 2015"
+        },
+        {
+            "version": "1.8.4",
+            "major": "1.8",
+            "majorName": "Bountiful Update",
+            "release": "April 17, 2015"
+        },
+        {
+            "version": "1.8.5",
+            "major": "1.8",
+            "majorName": "Bountiful Update",
+            "release": "May 22, 2015"
+        },
+        {
+            "version": "1.8.6",
+            "major": "1.8",
+            "majorName": "Bountiful Update",
+            "release": "May 25, 2015"
+        },
+        {
+            "version": "1.8.7",
+            "major": "1.8",
+            "majorName": "Bountiful Update",
+            "release": "June 5, 2015"
+        },
+        {
+            "version": "1.8.8",
+            "major": "1.8",
+            "majorName": "Bountiful Update",
+            "release": "July 28, 2015"
+        },
+        {
+            "version": "1.8.9",
+            "major": "1.8",
+            "majorName": "Bountiful Update",
+            "release": "December 9, 2015"
+        },
+        {
+            "version": "1.9",
+            "major": "1.9",
+            "majorName": "Combat Update",
+            "release": "February 29, 2016"
+        },
+        {
+            "version": "1.9.1",
+            "major": "1.9",
+            "majorName": "Combat Update",
+            "release": "March 30, 2016"
+        },
+        {
+            "version": "1.9.2",
+            "major": "1.9",
+            "majorName": "Combat Update",
+            "release": "March 30, 2016"
+        },
+        {
+            "version": "1.9.3",
+            "major": "1.9",
+            "majorName": "Combat Update",
+            "release": "May 10, 2016"
+        },
+        {
+            "version": "1.9.4",
+            "major": "1.9",
+            "majorName": "Combat Update",
+            "release": "May 10, 2016"
+        },
+        {
+            "version": "1.10",
+            "major": "1.10",
+            "majorName": "Frostburn Update",
+            "release": "June 8, 2016"
+        },
+        {
+            "version": "1.10.1",
+            "major": "1.10",
+            "majorName": "Frostburn Update",
+            "release": "June 22, 2016"
+        },
+        {
+            "version": "1.10.2",
+            "major": "1.10",
+            "majorName": "Frostburn Update",
+            "release": "June 23, 2016"
+        },
+        {
+            "version": "1.11",
+            "major": "1.11",
+            "majorName": "Exploration Update",
+            "release": "November 14, 2016"
+        },
+        {
+            "version": "1.11.1",
+            "major": "1.11",
+            "majorName": "Exploration Update",
+            "release": "December 20, 2016"
+        },
+        {
+            "version": "1.11.2",
+            "major": "1.11",
+            "majorName": "Exploration Update",
+            "release": "December 21, 2016"
+        },
+        {
+            "version": "1.12",
+            "major": "1.12",
+            "majorName": "World of Color Update",
+            "release": "June 7, 2017"
+        },
+        {
+            "version": "1.12.1",
+            "major": "1.12",
+            "majorName": "World of Color Update",
+            "release": "August 3, 2017"
+        },
+        {
+            "version": "1.12.2",
+            "major": "1.12",
+            "majorName": "World of Color Update",
+            "release": "September 18, 2017"
+        },
+        {
+            "version": "1.13",
+            "major": "1.13",
+            "majorName": "Update Aquatic",
+            "release": "July 18, 2018"
+        },
+        {
+            "version": "1.13.1",
+            "major": "1.13",
+            "majorName": "Update Aquatic",
+            "release": "August 22, 2018"
+        },
+        {
+            "version": "1.13.2",
+            "major": "1.13",
+            "majorName": "Update Aquatic",
+            "release": "October 22, 2018"
+        },
+        {
+            "version": "1.14",
+            "major": "1.14",
+            "majorName": "Village & Pillage",
+            "release": "April 23, 2019"
+        },
+        {
+            "version": "1.14.1",
+            "major": "1.14",
+            "majorName": "Village & Pillage",
+            "release": "May 13, 2019"
+        },
+        {
+            "version": "1.14.2",
+            "major": "1.14",
+            "majorName": "Village & Pillage",
+            "release": "May 27, 2019"
+        },
+        {
+            "version": "1.14.3",
+            "major": "1.14",
+            "majorName": "Village & Pillage",
+            "release": "June 24, 2019"
+        },
+        {
+            "version": "1.14.4",
+            "major": "1.14",
+            "majorName": "Village & Pillage",
+            "release": "July 19, 2019"
+        },
+        {
+            "version": "1.15",
+            "major": "1.15",
+            "majorName": "Buzzy Bees",
+            "release": "December 10, 2019"
+        },
+        {
+            "version": "1.15.1",
+            "major": "1.15",
+            "majorName": "Buzzy Bees",
+            "release": "December 17, 2019"
+        },
+        {
+            "version": "1.15.2",
+            "major": "1.15",
+            "majorName": "Buzzy Bees",
+            "release": "January 21, 2020"
+        },
+        {
+            "version": "1.16",
+            "major": "1.16",
+            "majorName": "Nether Update",
+            "release": "June 23, 2020"
+        },
+        {
+            "version": "1.16.1",
+            "major": "1.16",
+            "majorName": "Nether Update",
+            "release": "June 24, 2020"
+        },
+        {
+            "version": "1.16.2",
+            "major": "1.16",
+            "majorName": "Nether Update",
+            "release": "August 11, 2020"
+        },
+        {
+            "version": "1.16.3",
+            "major": "1.16",
+            "majorName": "Nether Update",
+            "release": "September 10, 2020"
+        },
+        {
+            "version": "1.16.4",
+            "major": "1.16",
+            "majorName": "Nether Update",
+            "release": "November 2, 2020"
+        },
+        {
+            "version": "1.16.5",
+            "major": "1.16",
+            "majorName": "Nether Update",
+            "release": "January 15, 2021"
+        },
+        {
+            "version": "1.17",
+            "major": "1.17",
+            "majorName": "Caves & Cliffs Update I",
+            "release": "June 8, 2020"
+        },
+        {
+            "version": "1.17.1",
+            "major": "1.17",
+            "majorName": "Caves & Cliffs Update I",
+            "release": "July 6, 2020"
+        },
+        {
+            "version": "1.18",
+            "major": "1.18",
+            "majorName": "Caves & Cliffs Update II",
+            "release": "November 30, 2021"
+        },
+        {
+            "version": "1.18.1",
+            "major": "1.18",
+            "majorName": "Caves & Cliffs Update II",
+            "release": "December 10, 2021"
+        },
+        {
+            "version": "1.18.2",
+            "major": "1.18",
+            "majorName": "Caves & Cliffs Update II",
+            "release": "February 28, 2022"
+        },
+        {
+            "version": "1.19",
+            "major": "1.19",
+            "majorName": "The Wild Update",
+            "release": "June 7, 2022"
+        },
+        {
+            "version": "1.19.1",
+            "major": "1.19",
+            "majorName": "The Wild Update",
+            "release": "July 27, 2022"
+        },
+        {
+            "version": "1.19",
+            "major": "1.19.2",
+            "majorName": "The Wild Update",
+            "release": "August 5, 2022"
+        },
+        {
+            "version": "1.19",
+            "major": "1.19.3",
+            "majorName": "The Wild Update",
+            "release": null,
+            "planned": "December 6, 2022"
+        },
+        {
+            "version": "1.20",
+            "major": "1.20",
+            "majorName": null,
+            "release": null,
+            "planned": "2023"
+        }
+    ]
+}
