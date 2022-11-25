@@ -1,4 +1,4 @@
-const { ApplicationCommandType, ApplicationCommandOptionType } = require('discord.js');
+const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const Axios = require('axios');
 
 module.exports = {
@@ -21,14 +21,18 @@ module.exports = {
 
             let data = res.data.find(x => query === x.name || query === x.text_type || query === `${x.type}:${x.meta}` || query === x.type);
             if (data) {
-                let embed = {
+                let embed = new EmbedBuilder({
                     title: `Item | ${data.name}`,
-                    description: `\`${data.text_type}\``,
                     color: client.c.main,
                     thumbnail: {
                         url: client.config.logo
                     },
                     fields: [
+                        {
+                            name: 'Text Type',
+                            value: `\`${data.text_type}\``,
+                            inline: true
+                        },
                         {
                             name: 'ID',
                             value: `${data.type}:${data.meta}`,
@@ -39,13 +43,8 @@ module.exports = {
                             value: data.type,
                             inline: true
                         },
-                        {
-                            name: 'Meta',
-                            value: data.meta,
-                            inline: true
-                        }
                     ]
-                };
+                });
                 return interaction.reply({ embeds: [embed] });
             }
 
