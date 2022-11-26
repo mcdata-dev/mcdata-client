@@ -8,7 +8,7 @@ module.exports = {
     options: [
         {
             name: 'color',
-            description: 'The coloor.',
+            description: 'The color.',
             type: ApplicationCommandOptionType.String,
             required: false
         }
@@ -42,7 +42,7 @@ module.exports = {
                     },
                     {
                         name: 'MotdCode',
-                        value: c.motdCode,
+                        value: `\\` + c.motdCode,
                         inline: true
                     },
                     {
