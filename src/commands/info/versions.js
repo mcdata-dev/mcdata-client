@@ -52,7 +52,8 @@ module.exports = {
 
             let arr = [];
             await versions.data.forEach(val => {
-                arr.push(`\`${val.version}\``);
+                if (val.planned) arr.push(`_\`${val.version}*\`_`);
+                else arr.push(`\`${val.version}\``);
             });
 
             let embed = new EmbedBuilder({
@@ -61,7 +62,7 @@ module.exports = {
                 thumbnail: {
                     url: client.config.logo
                 },
-                description: '> _Excl. pre-releases etc._',
+                description: '> _Excl. pre-releases etc.\n> * = Not yet released_',
                 fields: [
                     {
                         name: 'List',
