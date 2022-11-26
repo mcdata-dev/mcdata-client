@@ -461,14 +461,14 @@
             "release": "July 27, 2022"
         },
         {
-            "version": "1.19",
-            "major": "1.19.2",
+            "version": "1.19.2",
+            "major": "1.19",
             "majorName": "The Wild Update",
             "release": "August 5, 2022"
         },
         {
-            "version": "1.19",
-            "major": "1.19.3",
+            "version": "1.19.3",
+            "major": "1.19",
             "majorName": "The Wild Update",
             "release": null,
             "planned": "December 6, 2022"
