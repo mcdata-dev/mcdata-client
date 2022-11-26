@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Badge {
+  id     Int     @id @default(autoincrement())
+  userId String  @db.VarChar(20)
+  badge  String  @db.VarChar(255)
+  user   Profile @relation(fields: [userId], references: [userId])
+
+  @@index([userId], map: "userId")
+}
+
+model Profile {
+  userId      String    @id @db.VarChar(20)
+  uuid        String?   @db.VarChar(100)
+  linkedSince DateTime? @db.Date
+  badges      Badge[]
+}
