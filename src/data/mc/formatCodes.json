@@ -1,0 +1,50 @@
+{
+    "updated": {
+        "date": "2022-11-26",
+        "majorVersion": "1.19"
+    },
+    "data": [
+        {
+            "name": "Obfuscated",
+            "tag": "obfuscated",
+            "chatCode": "§k",
+            "motdCode": "u00A7k",
+            "example": null
+        },
+        {
+            "name": "Bold",
+            "tag": "bold",
+            "chatCode": "§l",
+            "motdCode": "u00A7l",
+            "example": "**{TEXT}**"
+        },
+        {
+            "name": "Strikethrough",
+            "tag": "strikethrough",
+            "chatCode": "§m",
+            "motdCode": "u00A7m",
+            "example": "~~{TEXT}~~"
+        },
+        {
+            "name": "Underline",
+            "tag": "underline",
+            "chatCode": "§n",
+            "motdCode": "u00A7n",
+            "example": "__{TEXT}__"
+        },
+        {
+            "name": "Italic",
+            "tag": "italic",
+            "chatCode": "§o",
+            "motdCode": "u00A7o",
+            "example": "_{TEXT}_"
+        },
+        {
+            "name": "Reset",
+            "tag": "reset",
+            "chatCode": "§r",
+            "motdCode": "u00A7r",
+            "example": "{TEXT}"
+        }
+    ]
+}
