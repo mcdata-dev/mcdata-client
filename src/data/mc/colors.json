@@ -1,0 +1,120 @@
+{
+    "updated": {
+        "date": "2022-02-08",
+        "majorVersion": "1.18"
+    },
+    "data": [
+        {
+            "name": "Black",
+            "tag": "black",
+            "chatCode": "§0",
+            "motdCode": "u00A70",
+            "hexCode": "#000000"
+        },
+        {
+            "name": "Dark Blue",
+            "tag": "dark_blue",
+            "chatCode": "§1",
+            "motdCode": "u00A71",
+            "hexCode": "#0000aa"
+        },
+        {
+            "name": "Dark Green",
+            "tag": "dark_green",
+            "chatCode": "§2",
+            "motdCode": "u00A72",
+            "hexCode": "#00aa00"
+        },
+        {
+            "name": "Dark Aqua",
+            "tag": "dark_aqua",
+            "chatCode": "§3",
+            "motdCode": "u00A73",
+            "hexCode": "#00aaaa"
+        },
+        {
+            "name": "Dark Red",
+            "tag": "dark_red",
+            "chatCode": "§4",
+            "motdCode": "u00A74",
+            "hexCode": "#aa0000"
+        },
+        {
+            "name": "Dark Purple",
+            "tag": "dark_purple",
+            "chatCode": "§5",
+            "motdCode": "u00A75",
+            "hexCode": "#aa00aa"
+        },
+        {
+            "name": "Gold",
+            "tag": "gold",
+            "chatCode": "§6",
+            "motdCode": "u00A76",
+            "hexCode": "#ffaa00"
+        },
+        {
+            "name": "Gray",
+            "tag": "gray",
+            "chatCode": "§7",
+            "motdCode": "u00A77",
+            "hexCode": "#aaaaaa"
+        },
+        {
+            "name": "Dark Gray",
+            "tag": "dark_gray",
+            "chatCode": "§8",
+            "motdCode": "u00A78",
+            "hexCode": "#555555"
+        },
+        {
+            "name": "Blue",
+            "tag": "blue",
+            "chatCode": "§9",
+            "motdCode": "u00A79",
+            "hexCode": "#5555ff"
+        },
+        {
+            "name": "Green",
+            "tag": "green",
+            "chatCode": "§a",
+            "motdCode": "u00A7a",
+            "hexCode": "#55ff55"
+        },
+        {
+            "name": "Aqua",
+            "tag": "aqua",
+            "chatCode": "§b",
+            "motdCode": "u00A7b",
+            "hexCode": "#55ffff"
+        },
+        {
+            "name": "Red",
+            "tag": "red",
+            "chatCode": "§c",
+            "motdCode": "u00A7c",
+            "hexCode": "#ff5555"
+        },
+        {
+            "name": "Light Purple",
+            "tag": "light_purple",
+            "chatCode": "§d",
+            "motdCode": "u00A7d",
+            "hexCode": "#ff55ff"
+        },
+        {
+            "name": "Yellow",
+            "tag": "yellow",
+            "chatCode": "§e",
+            "motdCode": "u00A7e",
+            "hexCode": "#ffff55"
+        },
+        {
+            "name": "White",
+            "tag": "white",
+            "chatCode": "§f",
+            "motdCode": "u00A7f",
+            "hexCode": "#ffffff"
+        }
+    ]
+}
