@@ -19,7 +19,7 @@ module.exports = {
 
         if (query && query !== interaction.user.id) {
 
-            user = await client.prisma.profile.findFirst({
+            user = await client.prisma.profile.findUnique({
                 where: { userId: query }
             });
 
@@ -27,7 +27,7 @@ module.exports = {
 
         } else {
 
-            user = await client.prisma.profile.findFirst({
+            user = await client.prisma.profile.findUnique({
                 where: {
                     userId: interaction.user.id
                 }
@@ -48,6 +48,8 @@ module.exports = {
             }
 
         }
+
+        console.log(user);
 
         let embed = new EmbedBuilder({
             title: `Profile | ${query ? interaction.guild.members.cache.get(user.userId).user.username : interaction.user.username}`,
