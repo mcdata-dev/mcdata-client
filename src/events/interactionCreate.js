@@ -14,6 +14,11 @@ client.on('interactionCreate', async interaction => {
     if (!command) return client.commands.delete(interaction.commandName);
 
     try {
+        if (command.devOnly) {
+            if (interaction.user.id !== process.env.OWNER_ID) return interaction.reply(client.embeds.fail('Nice try, but you can\'t use this command.'));
+            await command.run(client, interaction);
+        }
+
         if (command.cooldown) {
             if (cooldowns.has(`${command.name}-${interaction.user.id}`)) {
                 let duration = ms(cooldowns.get(`${command.name}-${interaction.user.id}`) - Date.now(), { long: true });
