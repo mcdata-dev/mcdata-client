@@ -11,6 +11,7 @@ CREATE TABLE `Badge` (
 -- CreateTable
 CREATE TABLE `Profile` (
     `userId` VARCHAR(20) NOT NULL,
+    `desc` VARCHAR(255) NOT NULL, 
     `uuid` VARCHAR(100) NULL,
     `linkedSince` DATE NULL,
 
