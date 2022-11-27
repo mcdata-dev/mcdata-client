@@ -17,7 +17,7 @@ module.exports = {
         let query = interaction.options.get('user')?.value;
         let user;
 
-        if (query) {
+        if (query && query !== interaction.user.id) {
 
             user = await client.prisma.profile.findFirst({
                 where: { userId: query }
