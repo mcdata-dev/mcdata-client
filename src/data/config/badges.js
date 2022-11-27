@@ -13,43 +13,31 @@ module.exports = {
             'level': 1,
             'id': 'dev',
             'name': 'Developer',
-            'badge': '<:Ex_devBadge:817346861802192937>'
+            'badge': '<:mc_dev:1046520897709817927>'
         },
         {
             'level': 2,
             'id': 'vip',
             'name': 'VIP',
-            'badge': '<:Ex_vipBadge:817346862075478046>'
+            'badge': '<:mc_vip:1046521034221822012>'
         },
         {
             'level': 3,
             'id': 'mod',
             'name': 'Moderator',
-            'badge': '<:Ex_modBadge:817346862247706644>'
+            'badge': '<:mc_mod:1046521032980320367>'
         },
         {
             'level': 4,
-            'id': 'kofi',
-            'name': 'Ko-fi Donator',
-            'badge': '<:Ex_kofiBadge:818075915140988970>'
+            'id': 'donator',
+            'name': 'Donator',
+            'badge': '<:mc_donator:1046521029075406960>'
         },
         {
             'level': 5,
-            'id': 'donator',
-            'name': 'Donator',
-            'badge': '<:Ex_donaterBadge:817346862146256916> '
-        },
-        {
-            'level': 6,
-            'id': 'translator',
-            'name': 'Translator',
-            'badge': '<:Ex_translatorBadge:818083420563308576>'
-        },
-        {
-            'level': 7,
             'id': 'friend',
             'name': 'Friend',
-            'badge': '<:Ex_friendBadge:817346862066434058>'
+            'badge': '<:mc_friend:1046521030627299378>'
         }
     ]
 };
