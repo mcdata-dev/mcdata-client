@@ -9,11 +9,9 @@ datasource db {
 
 model Badge {
   id     Int     @id @default(autoincrement())
-  userId String  @db.VarChar(20)
-  badge  String  @db.VarChar(255)
   user   Profile @relation(fields: [userId], references: [userId])
-
-  @@index([userId], map: "userId")
+  userId String
+  badge  String  @db.VarChar(255)
 }
 
 model Profile {
