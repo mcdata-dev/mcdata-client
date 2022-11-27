@@ -3,9 +3,7 @@ module.exports = {
         'dev',
         'vip',
         'mod',
-        'kofi',
         'donator',
-        'translator',
         'friend'
     ],
     data: [
