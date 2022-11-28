@@ -33,14 +33,14 @@ module.exports = {
             id: 'donator',
             name: 'Donator',
             badge: '<:mc_donator:1046521029075406960>',
-            desc: 'Someone who donated to support the development & keeping the bot online.'
+            desc: 'Someone who donated €2,- or more to support the development.'
         },
         {
             level: 5,
             id: 'friend',
             name: 'Friend',
             badge: '<:mc_friend:1046521030627299378>',
-            desc: 'Yep, a friend.'
+            desc: '~~The love of my life~~ A friend'
         }
     ]
 };
