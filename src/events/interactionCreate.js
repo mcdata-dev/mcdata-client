@@ -16,7 +16,7 @@ client.on('interactionCreate', async interaction => {
     try {
         if (command.devOnly) {
             if (interaction.user.id !== process.env.OWNER_ID) return interaction.reply(client.embeds.fail('Nice try, but you can\'t use this command.'));
-            await command.run(client, interaction);
+            return command.run(client, interaction);
         }
 
         if (command.cooldown) {
