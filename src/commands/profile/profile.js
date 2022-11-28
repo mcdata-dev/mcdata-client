@@ -64,7 +64,7 @@ module.exports = {
                 },
                 {
                     name: 'Badges',
-                    value: user.badges[0] ? getBadges(user.badges) : '`-`',
+                    value: user.badges.length > 0 ? getBadges(user.badges) : '`-`',
                     inline: true
                 }
             ]
