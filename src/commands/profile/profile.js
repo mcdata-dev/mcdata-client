@@ -1,4 +1,5 @@
 const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
+const badges = require('../../data/config/badges');
 
 module.exports = {
     name: 'profile',
@@ -18,22 +19,16 @@ module.exports = {
         let user;
 
         if (query && query !== interaction.user.id) {
-
             user = await client.prisma.profile.findUnique({
                 where: { userId: query },
                 include: { badges: true }
             });
-
             if (!user) return interaction.reply(client.embeds.fail('This user does not have a profile yet.'));
-
         } else {
-
             user = await client.prisma.profile.findUnique({
                 where: { userId: interaction.user.id },
                 include: { badges: true }
-
             });
-
             if (!user) {
                 try {
                     let newUser = await client.prisma.profile.create({
@@ -47,10 +42,7 @@ module.exports = {
                     return interaction.reply(client.embeds.error);
                 }
             }
-
         }
-
-        console.log(user);
 
         let embed = new EmbedBuilder({
             title: `Profile | ${query ? interaction.guild.members.cache.get(user.userId).user.username : interaction.user.username}`,
@@ -61,7 +53,7 @@ module.exports = {
             },
             fields: [
                 {
-                    name: 'UUID',
+                    name: 'Mc Account',
                     value: user?.uuid ? user.uuid : '`❌ - /link`',
                     inline: true
                 },
@@ -72,13 +64,19 @@ module.exports = {
                 },
                 {
                     name: 'Badges',
-                    value: '`-`',
+                    value: user.badges[0] ? getBadges(user.badges) : '`-`',
                     inline: true
                 }
             ]
         });
-
         return interaction.reply({ embeds: [embed] });
-
     }
 };
+
+function getBadges(list) {
+    let arr = [];
+    list.forEach((val) => {
+        arr.push(badges.data.find(x => x.id === val.badge).badge);
+    });
+    return arr.join(' ');
+}
