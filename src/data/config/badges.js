@@ -8,34 +8,39 @@ module.exports = {
     ],
     data: [
         {
-            'level': 1,
-            'id': 'dev',
-            'name': 'Developer',
-            'badge': '<:mc_dev:1046520897709817927>'
+            level: 1,
+            id: 'dev',
+            name: 'Developer',
+            badge: '<:mc_dev:1046520897709817927>',
+            desc: 'The creator of McData.'
         },
         {
-            'level': 2,
-            'id': 'vip',
-            'name': 'VIP',
-            'badge': '<:mc_vip:1046521034221822012>'
+            level: 2,
+            id: 'vip',
+            name: 'VIP',
+            badge: '<:mc_vip:1046521034221822012>',
+            desc: 'Someone who meant a lot to the development of McData.'
         },
         {
-            'level': 3,
-            'id': 'mod',
-            'name': 'Moderator',
-            'badge': '<:mc_mod:1046521032980320367>'
+            level: 3,
+            id: 'mod',
+            name: 'Moderator',
+            badge: '<:mc_mod:1046521032980320367>',
+            desc: 'A moderator on the support server.'
         },
         {
-            'level': 4,
-            'id': 'donator',
-            'name': 'Donator',
-            'badge': '<:mc_donator:1046521029075406960>'
+            level: 4,
+            id: 'donator',
+            name: 'Donator',
+            badge: '<:mc_donator:1046521029075406960>',
+            desc: 'Someone who donated to support the development & keeping the bot online.'
         },
         {
-            'level': 5,
-            'id': 'friend',
-            'name': 'Friend',
-            'badge': '<:mc_friend:1046521030627299378>'
+            level: 5,
+            id: 'friend',
+            name: 'Friend',
+            badge: '<:mc_friend:1046521030627299378>',
+            desc: 'Yep, a friend.'
         }
     ]
 };
