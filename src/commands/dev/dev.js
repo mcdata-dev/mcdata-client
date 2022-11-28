@@ -55,42 +55,45 @@ module.exports = {
                 }
             ],
         },
-        // {
-        //     name: 'blacklist',
-        //     description: 'Options regarding the blacklist.',
-        //     type: ApplicationCommandOptionType.SubcommandGroup,
-        //     required: false,
-        //     options: [
-        //         {
-        //             name: 'add',
-        //             description: 'Add someone to the blacklist.',
-        //             type: ApplicationCommandOptionType.Subcommand,
-        //             required: false,
-        //             options: [
-        //                 {
-        //                     name: 'user',
-        //                     description: 'The user you want to add to the blacklist.',
-        //                     type: ApplicationCommandOptionType.User,
-        //                     required: true
-        //                 }
-        //             ]
-        //         },
-        //         {
-        //             name: 'remove',
-        //             description: 'Remove someone from the blacklist.',
-        //             type: ApplicationCommandOptionType.Subcommand,
-        //             required: false,
-        //             options: [
-        //                 {
-        //                     name: 'user',
-        //                     description: 'The user you want remove from the blacklist.',
-        //                     type: ApplicationCommandOptionType.User,
-        //                     required: true
-        //                 }
-        //             ]
-        //         }
-        //     ],
-        // }
+        /*
+        ! TK - Blacklist
+        {
+            name: 'blacklist',
+            description: 'Options regarding the blacklist.',
+            type: ApplicationCommandOptionType.SubcommandGroup,
+            required: false,
+            options: [
+                {
+                    name: 'add',
+                    description: 'Add someone to the blacklist.',
+                    type: ApplicationCommandOptionType.Subcommand,
+                    required: false,
+                    options: [
+                        {
+                            name: 'user',
+                            description: 'The user you want to add to the blacklist.',
+                            type: ApplicationCommandOptionType.User,
+                            required: true
+                        }
+                    ]
+                },
+                {
+                    name: 'remove',
+                    description: 'Remove someone from the blacklist.',
+                    type: ApplicationCommandOptionType.Subcommand,
+                    required: false,
+                    options: [
+                        {
+                            name: 'user',
+                            description: 'The user you want remove from the blacklist.',
+                            type: ApplicationCommandOptionType.User,
+                            required: true
+                        }
+                    ]
+                }
+            ],
+        }
+        */
     ],
     run: async (client, interaction) => {
 
@@ -156,8 +159,11 @@ module.exports = {
 
                 break;
 
-            // case 'blacklist':
-            //     return interaction.reply('TK');
+            /*
+            !TK - Blacklist
+            case 'blacklist':
+                return interaction.reply('TK');
+            */
         }
     }
 };
