@@ -59,17 +59,10 @@ module.exports = {
                 }
             });
 
-            //? Oy mate, if it works it works 😎
-            let cmds = [];
-            ['general', 'info', 'profile'].forEach((cat) => {
-                const cmdFiles = fs.readdirSync(`./src/commands/${cat}`).filter(file => file.endsWith('.js'));
-                for (const file of cmdFiles) cmds.push({ category: cat, item: `\`${file.split('.')[0]}\`` });
-            });
-
             embed.addFields(
-                { name: 'General', value: cmds.filter(x => x.category === 'general').map(function (c) { return c.item; }).join(', ') },
-                { name: 'Info', value: cmds.filter(x => x.category === 'info').map(function (c) { return c.item; }).join(', ') },
-                { name: 'Profile', value: cmds.filter(x => x.category === 'profile').map(function (c) { return c.item; }).join(', ') }
+                { name: 'General', value: client.commands.filter(x => x.category === 'general').map(function (c) { return `\`${c.name}\``; }).join(', ') },
+                { name: 'Info', value: client.commands.filter(x => x.category === 'info').map(function (c) { return `\`${c.name}\``; }).join(', ') },
+                { name: 'Profile', value: client.commands.filter(x => x.category === 'profile').map(function (c) { return `\`${c.name}\``; }).join(', ') },
             );
             return interaction.reply({ embeds: [embed] });
         }
