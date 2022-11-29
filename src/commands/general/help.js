@@ -58,6 +58,7 @@ module.exports = {
                 }
             });
 
+            //? Oy mate, if it works it works 😎
             let cmds = [];
             ['general', 'info', 'profile'].forEach((cat) => {
                 const cmdFiles = fs.readdirSync(`./src/commands/${cat}`).filter(file => file.endsWith('.js'));
