@@ -4,6 +4,7 @@ const badges = require('../../data/config/badges');
 module.exports = {
     name: 'dev',
     description: 'Dev-only commands.',
+    category: 'dev',
     devOnly: true,
     type: ApplicationCommandType.ChatInput,
     options: [
@@ -55,6 +56,21 @@ module.exports = {
                 }
             ],
         },
+        {
+            name: 'reload',
+            description: 'Reload a command.',
+            type: ApplicationCommandOptionType.Subcommand,
+            required: false,
+            options: [
+                {
+                    name: 'command',
+                    description: 'The command you want to reload.',
+                    type: ApplicationCommandOptionType.String,
+                    required: true
+                }
+            ]
+
+        }
         /*
         ! TK - Blacklist
         {
@@ -159,11 +175,33 @@ module.exports = {
 
                 break;
 
+            case 'reload':
+                let givenCmd = query.options[0];
+                let command = client.commands.get(givenCmd.value);
+                if (!command) return interaction.reply(client.embeds.fail('This command does not exist.'));
+
+                delete require.cache[
+                    require.resolve(
+                        `${process.cwd()}/src/commands/${command.category}/${command.name}.js`
+                    )
+                ];
+
+                try {
+                    const newCmd = require(`${process.cwd()}/src/commands/${command.category}/${command.name}.js`);
+                    client.commands.set(newCmd.name, newCmd);
+                    return interaction.reply(client.embeds.done(`Reloaded \`${givenCmd.value}\``));
+                } catch (e) {
+                    console.error(e);
+                    return interaction.reply(client.embeds.fail(`Failed while trying to reload \`${givenCmd.value}\``));
+                }
+
+
             /*
             !TK - Blacklist
             case 'blacklist':
                 return interaction.reply('TK');
             */
+
         }
     }
 };
