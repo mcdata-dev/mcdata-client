@@ -4,6 +4,7 @@ const fs = require('fs');
 module.exports = {
     name: 'help',
     description: 'All commands & more information.',
+    category: 'general',
     type: ApplicationCommandType.ChatInput,
     options: [
         {

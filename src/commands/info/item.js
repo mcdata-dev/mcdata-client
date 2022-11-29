@@ -4,6 +4,7 @@ const Axios = require('axios');
 module.exports = {
     name: 'item',
     description: "Get information about an item.",
+    category: 'info',
     type: ApplicationCommandType.ChatInput,
     options: [
         {

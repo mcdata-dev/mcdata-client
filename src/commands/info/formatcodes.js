@@ -4,6 +4,7 @@ const formatCodes = require('../../data/mc/formatCodes.json');
 module.exports = {
     name: 'formatcodes',
     description: 'Get information about formatcode(s).',
+    category: 'info',
     type: ApplicationCommandType.ChatInput,
     options: [
         {

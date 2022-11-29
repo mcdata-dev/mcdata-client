@@ -3,6 +3,7 @@ const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = r
 module.exports = {
     name: 'description',
     description: 'Settings regarding your description',
+    category: 'profile',
     type: ApplicationCommandType.ChatInput,
     options: [
         {

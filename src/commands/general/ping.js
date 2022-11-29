@@ -3,6 +3,7 @@ const { ApplicationCommandType } = require('discord.js');
 module.exports = {
     name: 'ping',
     description: "Check the ping.",
+    category: 'general',
     type: ApplicationCommandType.ChatInput,
     cooldown: 10000,
     run: async (client, interaction) => {

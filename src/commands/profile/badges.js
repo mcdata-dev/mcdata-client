@@ -4,6 +4,7 @@ const badges = require('../../data/config/badges');
 module.exports = {
     name: 'badges',
     description: 'Get information about badges.',
+    category: 'profile',
     type: ApplicationCommandType.ChatInput,
     options: [
         {

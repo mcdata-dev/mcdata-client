@@ -4,6 +4,7 @@ const versions = require('../../data/mc/versions.json');
 module.exports = {
     name: 'versions',
     description: 'Get informations about version(s).',
+    category: 'info',
     type: ApplicationCommandType.ChatInput,
     options: [
         {

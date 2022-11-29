@@ -4,6 +4,7 @@ const colors = require('../../data/mc/colors.json');
 module.exports = {
     name: 'colors',
     description: 'Get information about color(s).',
+    category: 'info',
     type: ApplicationCommandType.ChatInput,
     options: [
         {
