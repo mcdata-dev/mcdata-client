@@ -24,22 +24,21 @@ module.exports = {
             let player = new PlayerManager(query);
             player.usernameToUUID().then((data) => {
                 if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.code}]\` ${data.msg}`));
-
                 let embed = new EmbedBuilder({
-                    title: `Username >> UUID`,
+                    title: `Username >> UUID | Fyxren`,
                     color: client.c.main,
                     thumbnail: {
                         url: `https://crafatar.com/avatars/${data.id}`
                     },
                     fields: [
                         {
-                            name: 'Username',
-                            value: data.name,
+                            name: 'UUID',
+                            value: data.id,
                             inline: true
                         },
                         {
-                            name: 'UUID',
-                            value: data.id,
+                            name: 'Cached',
+                            value: `<t:${data.cachedAt}:R>`,
                             inline: true
                         }
                     ]

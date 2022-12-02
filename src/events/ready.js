@@ -1,4 +1,5 @@
 const { ActivityType } = require('discord.js');
+const { UuidCacheInterval } = require('../managers/CacheManager');
 const client = require('..');
 
 client.on('ready', () => {
@@ -15,6 +16,8 @@ client.on('ready', () => {
         client.user.setActivity(activityList[i]);
         i++;
     }, 30000);
+
+    UuidCacheInterval();
 
     console.log(`Client - Logged in as ${client.user.tag}`);
 
