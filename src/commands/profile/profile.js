@@ -1,4 +1,5 @@
 const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
+const PlayerManager = require('../../managers/PlayerManager');
 const badges = require('../../data/config/badges');
 
 module.exports = {
@@ -45,12 +46,20 @@ module.exports = {
             }
         }
 
+        let imageURL;
+        if (user.uuid) {
+            let player = new PlayerManager(user.uuid);
+            await player.giveHead({ id: user.uuid }).then((image) => imageURL = image);
+        } else {
+            imageURL = interaction.guild.members.cache.get(user.userId).user.displayAvatarURL({ dynamic: true, size: 2048 });
+        }
+
         let embed = new EmbedBuilder({
             title: `Profile | ${query ? interaction.guild.members.cache.get(user.userId).user.username : interaction.user.username}`,
             color: client.c.main,
             description: user.desc || null,
             thumbnail: {
-                url: interaction.guild.members.cache.get(user.userId).user.displayAvatarURL({ dynamic: true, size: 2048 }) || client.user.displayAvatarURL({ size: 2048 })
+                url: imageURL
             },
             footer: client.config.footer,
             timestamp: Date.now(),
