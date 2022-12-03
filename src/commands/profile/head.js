@@ -33,15 +33,44 @@ module.exports = {
     run: async (client, interaction) => {
 
         let query = interaction.options.get('username')?.value;
-        if (!query) return interaction.reply(client.embeds.fail('You have to provide a username for now.'));
+        let type = interaction.options.get('type')?.value;
 
-        if (query) {
+        if (!query) {
+            let profile = await client.prisma.profile.findUnique({
+                where: { userId: interaction.user.id }
+            });
+            if (!profile.uuid) return interaction.reply(client.embeds.fail('You don\'t have a linked account. Link your account or provide a username.'));
+
+            let player = new PlayerManager(profile.uuid);
+            player.UUIDToUsername().then(async (data) => {
+                if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.status}]\` ${data.msg}`));
+
+                let embed = new EmbedBuilder({
+                    title: `\`[${type ? type.toUpperCase() : '2D'}]\` Head | ${data.name}`,
+                    color: client.c.main,
+                    footer: client.config.footer,
+                    timestamp: Date.now()
+                });
+
+                if (type === '3d') {
+                    await player.giveHead({ type: '3d', id: data.id }).then((image) => {
+                        embed.setImage(image);
+                    });
+                } else {
+                    await player.giveHead({ id: data.id }).then((image) => {
+                        embed.setImage(image);
+                    });
+                }
+
+                return interaction.reply({ embeds: [embed] });
+
+            });
+        } else {
 
             let player = new PlayerManager(query);
             player.usernameToUUID().then(async (data) => {
                 if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.status}]\` ${data.msg}`));
 
-                let type = interaction.options.get('type')?.value;
                 let embed = new EmbedBuilder({
                     title: `\`[${type ? type.toUpperCase() : '2D'}]\` Head | ${data.name}`,
                     color: client.c.main,
