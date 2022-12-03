@@ -38,6 +38,23 @@ class PlayerManager {
         }
     }
 
+    async UUIDToUsername() {
+
+        let cached = UuidCache.get(this.player);
+        if (cached) {
+            if ((cached.cachedAt + TimeToCache) < Date.now()) UuidCache.delete(this.player);
+            return { status: 200, name: cached.name, id: cached.id, cachedAt: cached.cachedAt };
+        }
+
+        try {
+            const { status, data } = await Axios.get(`https://sessionserver.mojang.com/session/minecraft/profile/${this.player}`);
+            UuidCache.set(data.id, { cachedAt: getCurrentUnix(), ...data });
+            return { cachedAt: getCurrentUnix(), status, ...data };
+        } catch ({ response: { status } }) {
+            return errors[status];
+        }
+    }
+
     //? Skins
     async giveHead(options) {
         return `https://crafatar.com/${options?.type?.toLowerCase() === '3d' ? 'renders/head' : 'avatars'}/${options.id}?overlay`;
