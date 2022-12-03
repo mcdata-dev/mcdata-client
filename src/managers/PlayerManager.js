@@ -37,6 +37,16 @@ class PlayerManager {
             return errors[status];
         }
     }
+
+    //? Skins
+    async giveHead(options) {
+        return `https://crafatar.com/${options?.type?.toLowerCase() === '3d' ? 'renders/head' : 'avatars'}/${options.id}?overlay`;
+    }
+
+    async getBody(id) {
+        return `https://crafatar.com/renders/body/${id}?overlay`;
+    }
+
 }
 
 module.exports = PlayerManager;
