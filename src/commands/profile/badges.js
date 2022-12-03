@@ -36,6 +36,8 @@ module.exports = {
                     url: `https://cdn.discordapp.com/emojis/${badge.badge.split(':')[2].slice(0, -1)}.webp?size=2048&quality=lossless`
                 },
                 description: `> _${badge.desc}_`,
+                footer: client.config.footer,
+                timestamp: Date.now(),
                 fields: [
                     {
                         name: 'ID',
@@ -64,7 +66,9 @@ module.exports = {
                 color: client.c.main,
                 thumbnail: {
                     url: client.config.logo
-                }
+                },
+                footer: client.config.footer,
+                timestamp: Date.now()
             });
             badges.data.forEach(val => embed.addFields({ name: `${val.badge} - ${val.name}`, value: val.desc, inline: true }));
             return interaction.reply({ embeds: [embed] });

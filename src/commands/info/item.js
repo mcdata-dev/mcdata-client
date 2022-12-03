@@ -28,6 +28,8 @@ module.exports = {
                     thumbnail: {
                         url: client.config.logo
                     },
+                    footer: client.config.footer,
+                    timestamp: Date.now(),
                     fields: [
                         {
                             name: 'Text Type',

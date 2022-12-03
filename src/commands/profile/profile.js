@@ -52,6 +52,8 @@ module.exports = {
             thumbnail: {
                 url: interaction.guild.members.cache.get(user.userId).user.displayAvatarURL({ dynamic: true, size: 2048 }) || client.user.displayAvatarURL({ size: 2048 })
             },
+            footer: client.config.footer,
+            timestamp: Date.now(),
             fields: [
                 {
                     name: 'Mc Account',

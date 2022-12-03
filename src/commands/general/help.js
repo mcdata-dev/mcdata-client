@@ -56,7 +56,9 @@ module.exports = {
                 color: client.c.main,
                 thumbnail: {
                     url: client.config.logo
-                }
+                },
+                footer: client.config.footer,
+                timestamp: Date.now()
             });
 
             embed.addFields(

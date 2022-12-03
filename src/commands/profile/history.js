@@ -12,6 +12,8 @@ module.exports = {
             thumbnail: {
                 url: client.config.logo
             },
+            footer: client.config.footer,
+            timestamp: Date.now(),
             description: `Mojang removed the ability to receive the name history to "**improve player safety and data privacy**".\n\nThis means that this command is not available anymore and will get removed in the future.`,
             fields: [
                 {

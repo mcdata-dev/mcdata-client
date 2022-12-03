@@ -1,5 +1,9 @@
 module.exports = {
     logo: 'https://i.imgur.com/yiwM0p9.jpg',
+    footer: {
+        icon_url: this.logo,
+        text: 'McData'
+    },
     links: {
         invite: `https://discord.com/api/oauth2/authorize?client_id=${process.env.BOT_ID}&permissions=8&scope=bot`,
         support: 'https://fyxren.com', //! TK: Update

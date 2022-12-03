@@ -30,6 +30,8 @@ module.exports = {
                     thumbnail: {
                         url: `https://crafatar.com/avatars/${data.id}`
                     },
+                    footer: client.config.footer,
+                    timestamp: Date.now(),
                     fields: [
                         {
                             name: 'UUID',

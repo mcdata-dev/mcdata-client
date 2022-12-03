@@ -33,6 +33,8 @@ module.exports = {
                 thumbnail: {
                     url: client.config.logo
                 },
+                footer: client.config.footer,
+                timestamp: Date.now(),
                 fields: [
                     {
                         name: 'ChatCode',
@@ -65,7 +67,9 @@ module.exports = {
                 thumbnail: {
                     url: client.config.logo
                 },
-                description: arr.join(', ')
+                description: arr.join(', '),
+                footer: client.config.footer,
+                timestamp: Date.now()
             });
 
             return interaction.reply({ embeds: [embed] });

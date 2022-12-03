@@ -45,7 +45,7 @@ module.exports = {
                 let embed = new EmbedBuilder({
                     title: `\`[${type ? type.toUpperCase() : '2D'}]\` Head | ${data.name}`,
                     color: client.c.main,
-                    footer: { icon_url: client.config.logo, text: 'McData' },
+                    footer: client.config.footer,
                     timestamp: Date.now()
                 });
 

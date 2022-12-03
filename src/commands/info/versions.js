@@ -28,6 +28,8 @@ module.exports = {
                 thumbnail: {
                     url: client.config.logo
                 },
+                footer: client.config.footer,
+                timestamp: Date.now(),
                 fields: [
                     {
                         name: 'Major',
@@ -64,6 +66,8 @@ module.exports = {
                     url: client.config.logo
                 },
                 description: '> _Excl. pre-releases etc.\n> * = Not yet released_',
+                footer: client.config.footer,
+                timestamp: Date.now(),
                 fields: [
                     {
                         name: 'List',

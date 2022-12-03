@@ -31,10 +31,7 @@ module.exports = {
                         image: {
                             url: image
                         },
-                        footer: {
-                            icon_url: client.config.logo,
-                            text: 'McData'
-                        },
+                        footer: client.config.logo,
                         timestamp: Date.now()
                     });
                     return interaction.reply({ embeds: [embed] });
