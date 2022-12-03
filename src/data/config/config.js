@@ -1,7 +1,7 @@
 module.exports = {
     logo: 'https://i.imgur.com/yiwM0p9.jpg',
     footer: {
-        icon_url: this.logo,
+        icon_url: 'https://i.imgur.com/yiwM0p9.jpg',
         text: 'McData'
     },
     links: {
