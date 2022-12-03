@@ -17,13 +17,13 @@ module.exports = {
     run: async (client, interaction) => {
 
         let query = interaction.options.get('username')?.value;
-        if (!query) query = 'Fyxren';
+        if (!query) return interaction.reply(client.embeds.fail('You have to provide a username for now..'));
 
         if (query) {
 
             let player = new PlayerManager(query);
             player.usernameToUUID().then((data) => {
-                if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.code}]\` ${data.msg}`));
+                if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.satus}]\` ${data.msg}`));
                 let embed = new EmbedBuilder({
                     title: `Username >> UUID | Fyxren`,
                     color: client.c.main,
