@@ -37,7 +37,7 @@ module.exports = (client) => {
                 Routes.applicationCommands(process.env.BOT_ID),
                 { body: commands }
             );
-            client.logger.info(`Handlers`, `Application(/) commands registered`);
+            client.logger.info(`Application(/) commands registered`);
         } catch (e) {
             client.logger.error(`Handlers`, `Failed to register application (/) commands: ${e}`);
         }

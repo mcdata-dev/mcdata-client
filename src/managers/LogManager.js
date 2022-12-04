@@ -11,12 +11,12 @@ class LogManager {
         this.prefix = prefix;
     }
 
-    info(src, message, type) {
-        console.log(`[${moment().format('DD/MM/YYYY HH:mm:ss')}] ${colors.blue}${type ? type : this.prefix} - ${src} | Info${colors.none} - ${message}`);
+    info(message, type) {
+        console.log(`[${moment().format('DD/MM/YYYY HH:mm:ss')}] ${colors.cyan}${type ? type : this.prefix} | Info${colors.none} - ${message}`);
     }
 
-    ready(src, message, type) {
-        console.log(`[${moment().format('DD/MM/YYYY HH:mm:ss')}] ${colors.cyan}${type ? type : this.prefix} | Ready${colors.none} - ${message}`);
+    ready(message, type) {
+        console.log(`[${moment().format('DD/MM/YYYY HH:mm:ss')}] ${colors.green}${type ? type : this.prefix} | Ready${colors.none} - ${message}`);
     }
 
     error(src, message, type) {
