@@ -28,7 +28,6 @@ module.exports = {
             let count = await client.prisma.badge.count({
                 where: { badge: badge.id }
             });
-            console.log(count);
             let embed = new EmbedBuilder({
                 title: `Badge | ${badge.name}`,
                 color: client.c.main,
