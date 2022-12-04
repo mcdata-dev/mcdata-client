@@ -1,5 +1,5 @@
 const { ActivityType } = require('discord.js');
-const { UuidCacheInterval } = require('../managers/CacheManager');
+const { UuidCacheInterval, ItemCacheInterval } = require('../managers/CacheManager');
 const client = require('..');
 
 client.on('ready', () => {
@@ -17,6 +17,7 @@ client.on('ready', () => {
         i++;
     }, 30000);
 
+    ItemCacheInterval(client);
     UuidCacheInterval();
 
     client.logger.ready(`Logged in as ${client.user.tag}`);
