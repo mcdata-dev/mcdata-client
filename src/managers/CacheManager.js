@@ -9,5 +9,4 @@ const ClearIntervals = {
 module.exports.UuidCache = new Collection();
 module.exports.UuidCacheInterval = () => setInterval(() => {
     this.UuidCache.clear();
-    console.log('UuidCache - Cleared Cache');
 }, ClearIntervals.uuid);
