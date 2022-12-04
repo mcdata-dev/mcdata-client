@@ -15,12 +15,30 @@ module.exports = {
         }
     ],
     run: async (client, interaction) => {
-
         let query = interaction.options.get('username')?.value;
-        if (!query) return interaction.reply(client.embeds.fail('You have to provide a username for now.'));
+        if (!query) {
+            let profile = await client.prisma.profile.findUnique({
+                where: { userId: interaction.user.id }
+            });
+            if (!profile.uuid) return interaction.reply(client.embeds.fail('You don\'t have a linked account. Link your account or provide a username.'));
 
-        if (query) {
-
+            let player = new PlayerManager(profile.uuid);
+            player.UUIDToUsername().then((data) => {
+                if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.status}]\` ${data.msg}`));
+                player.getBody(data.id).then((image) => {
+                    let embed = new EmbedBuilder({
+                        title: `Skin | ${data.name}`,
+                        color: client.c.main,
+                        image: {
+                            url: image
+                        },
+                        footer: client.config.footer,
+                        timestamp: Date.now()
+                    });
+                    return interaction.reply({ embeds: [embed] });
+                });
+            });
+        } else {
             let player = new PlayerManager(query);
             player.usernameToUUID().then((data) => {
                 if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.status}]\` ${data.msg}`));
@@ -31,7 +49,7 @@ module.exports = {
                         image: {
                             url: image
                         },
-                        footer: client.config.logo,
+                        footer: client.config.footer,
                         timestamp: Date.now()
                     });
                     return interaction.reply({ embeds: [embed] });
