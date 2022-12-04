@@ -6,11 +6,13 @@ module.exports = {
     description: 'Get the UUID from a Minecraft user.',
     category: 'profile',
     type: ApplicationCommandType.ChatInput,
+    cooldown: 5000,
     options: [
         {
             name: 'username',
             description: 'A minecraft username.',
             type: ApplicationCommandOptionType.String,
+
             required: false
         }
     ],

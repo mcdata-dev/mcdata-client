@@ -6,6 +6,7 @@ module.exports = {
     description: 'View the head (2D/3D) of a player.',
     category: 'profile',
     type: ApplicationCommandType.ChatInput,
+    cooldown: 5000,
     options: [
         {
             name: 'username',

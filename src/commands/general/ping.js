@@ -5,7 +5,7 @@ module.exports = {
     description: "Check the ping.",
     category: 'general',
     type: ApplicationCommandType.ChatInput,
-    cooldown: 10000,
+    cooldown: 5000,
     run: async (client, interaction) => {
         let embed = {
             description: `🏓 Discord Websocket Latency: \`${Math.round(client.ws.ping)} ms\``,

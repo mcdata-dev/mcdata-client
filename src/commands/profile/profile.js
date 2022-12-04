@@ -7,6 +7,7 @@ module.exports = {
     description: 'View someones profile.',
     category: 'profile',
     type: ApplicationCommandType.ChatInput,
+    cooldown: 5000,
     options: [
         {
             name: 'user',

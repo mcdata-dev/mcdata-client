@@ -5,6 +5,7 @@ module.exports = {
     description: 'Settings regarding your description',
     category: 'profile',
     type: ApplicationCommandType.ChatInput,
+    cooldown: 10000,
     options: [
         {
             name: 'set',
