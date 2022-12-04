@@ -24,7 +24,7 @@ module.exports = (client) => {
             if (cmd.name) {
                 client.commands.set(cmd.name, cmd);
             } else {
-                console.log(`Client - Failed to load ${file.split('.js')[0]}`);
+                client.logger.error(`commands.js`, `Failed to load ${file.split('.js')[0]}`);
             }
 
         }
@@ -37,9 +37,9 @@ module.exports = (client) => {
                 Routes.applicationCommands(process.env.BOT_ID),
                 { body: commands }
             );
-            console.log(`Client - Application (/) commands registered`);
+            client.logger.info(`Handlers`, `Application(/) commands registered`);
         } catch (e) {
-            console.log(`Client - Failed to register application (/) commands`, e);
+            client.logger.error(`Handlers`, `Failed to register application (/) commands: ${e}`);
         }
     })();
 };

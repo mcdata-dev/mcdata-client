@@ -44,7 +44,7 @@ client.on('interactionCreate', async interaction => {
             await command.run(client, interaction);
         }
     } catch (e) {
-        console.log(e);
+        client.logger.error(`interactionCreate.js`, `Error while trying to execute a command: ${e}`);
         return interaction.reply(client.embeds.error);
     }
 

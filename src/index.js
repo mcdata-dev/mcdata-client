@@ -3,12 +3,14 @@ const fs = require('fs');
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const { PrismaClient } = require('@prisma/client');
+const Logger = require('./managers/LogManager');
 
 client.commands = new Collection();
 client.embeds = require('./data/config/embeds');
 client.e = require('./data/config/emotes');
 client.c = require('./data/config/colors');
 client.config = require('./data/config/config');
+client.logger = new Logger('Client');
 client.prisma = new PrismaClient();
 
 module.exports = client;

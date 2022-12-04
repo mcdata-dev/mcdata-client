@@ -135,7 +135,7 @@ module.exports = {
                                     }
                                 });
                             } catch (e) {
-                                console.log(e);
+                                client.logger.error(`dev.js`, `Error while trying to create a new profile: ${e}`);
                                 return interaction.reply(client.embeds.error);
                             }
                         }
@@ -148,7 +148,7 @@ module.exports = {
                             });
 
                         } catch (e) {
-                            console.log(e);
+                            client.logger.error(`dev.js`, `Error while trying to give a badge: ${e}`);
                             return interaction.reply(client.embeds.error);
                         }
 
@@ -168,7 +168,7 @@ module.exports = {
                             });
                             return interaction.reply(client.embeds.done(`The \`${data.options[1].value}\` badge has been removed from <@${data.options[0].value}>.`));
                         } catch (e) {
-                            console.log(e);
+                            client.logger.error(`dev.js`, `Error while trying to remove a badge: ${e}`);
                             return interaction.reply(client.embeds.error);
                         }
                 };
@@ -191,7 +191,7 @@ module.exports = {
                     client.commands.set(newCmd.name, newCmd);
                     return interaction.reply(client.embeds.done(`Reloaded \`${givenCmd.value}\``));
                 } catch (e) {
-                    console.error(e);
+                    client.logger.error(`dev.js`, `Error while trying to reload the command ${command.name}: ${e}`);
                     return interaction.reply(client.embeds.fail(`Failed while trying to reload \`${givenCmd.value}\``));
                 }
 

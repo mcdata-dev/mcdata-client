@@ -19,6 +19,5 @@ client.on('ready', () => {
 
     UuidCacheInterval();
 
-    console.log(`Client - Logged in as ${client.user.tag}`);
-
+    client.logger.ready(`Logged in as ${client.user.tag}`);
 });
