@@ -1,5 +1,6 @@
 const Axios = require('axios');
 const { UuidCache } = require('./CacheManager');
+const { getCurrentUnix } = require('../util/functions');
 const TimeToCache = 8_640_000; //? 10m
 const errors = {
     204: {
@@ -74,7 +75,3 @@ class PlayerManager {
 }
 
 module.exports = PlayerManager;
-
-function getCurrentUnix() {
-    return Math.round((new Date()).getTime() / 1000);
-}
