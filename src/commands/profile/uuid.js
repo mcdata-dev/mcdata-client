@@ -55,7 +55,7 @@ module.exports = {
 
         let player = new PlayerManager(query);
         player.usernameToUUID().then((data) => {
-            if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.satus}]\` ${data.msg}`));
+            if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.status}]\` ${data.msg}`));
             let embed = new EmbedBuilder({
                 title: `Username >> UUID | ${data.name}`,
                 color: client.c.main,
