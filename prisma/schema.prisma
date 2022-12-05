@@ -15,9 +15,9 @@ model Badge {
 }
 
 model Profile {
-  userId      String    @id @db.VarChar(20)
-  uuid        String?   @db.VarChar(100)
-  desc        String?   @db.VarChar(255)
-  linkedSince DateTime? @db.Date
-  badges      Badge[]
+  userId      String  @id @db.VarChar(20)
+  uuid        String? @db.VarChar(100)
+  desc        String? @db.VarChar(255)
+  linkedSince Int?
+  badge       Badge[]
 }
