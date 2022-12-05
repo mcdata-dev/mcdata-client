@@ -51,33 +51,37 @@ module.exports = {
                 });
                 return interaction.reply({ embeds: [embed] });
             });
-        }
+        } else {
 
-        let player = new PlayerManager(query);
-        player.usernameToUUID().then((data) => {
-            if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.status}]\` ${data.msg}`));
-            let embed = new EmbedBuilder({
-                title: `Username >> UUID | ${data.name}`,
-                color: client.c.main,
-                thumbnail: {
-                    url: `https://crafatar.com/avatars/${data.id}`
-                },
-                footer: client.config.footer,
-                timestamp: Date.now(),
-                fields: [
-                    {
-                        name: 'UUID',
-                        value: data.id,
-                        inline: true
+            let player = new PlayerManager(query);
+            player.usernameToUUID().then((data) => {
+                //! LOG
+                console.log(data);
+                if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.status}]\` ${data.msg}`));
+                let embed = new EmbedBuilder({
+                    title: `Username >> UUID | ${data.name}`,
+                    color: client.c.main,
+                    thumbnail: {
+                        url: `https://crafatar.com/avatars/${data.id}`
                     },
-                    {
-                        name: 'Cached',
-                        value: `<t:${data.cachedAt}:R>`,
-                        inline: true
-                    }
-                ]
+                    footer: client.config.footer,
+                    timestamp: Date.now(),
+                    fields: [
+                        {
+                            name: 'UUID',
+                            value: data.id,
+                            inline: true
+                        },
+                        {
+                            name: 'Cached',
+                            value: `<t:${data.cachedAt}:R>`,
+                            inline: true
+                        }
+                    ]
+                });
+
+                return interaction.reply({ embeds: [embed] });
             });
-            return interaction.reply({ embeds: [embed] });
-        });
+        }
     }
 };
