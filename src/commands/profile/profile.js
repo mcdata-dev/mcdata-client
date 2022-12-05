@@ -48,12 +48,15 @@ module.exports = {
         }
 
         let imageURL;
+        let mcName;
         if (user.uuid) {
             let player = new PlayerManager(user.uuid);
             await player.giveHead({ id: user.uuid }).then((image) => imageURL = image);
+            await player.UUIDToUsername().then((data) => mcName = data.name);
         } else {
             imageURL = interaction.guild.members.cache.get(user.userId).user.displayAvatarURL({ dynamic: true, size: 2048 });
         }
+
 
         let embed = new EmbedBuilder({
             title: `Profile | ${query ? interaction.guild.members.cache.get(user.userId).user.username : interaction.user.username}`,
@@ -67,7 +70,7 @@ module.exports = {
             fields: [
                 {
                     name: 'Mc Account',
-                    value: user?.uuid ? user.uuid : '`❌ - /link`',
+                    value: user?.uuid ? mcName : '`❌ - /link`',
                     inline: true
                 },
                 {
