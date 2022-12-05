@@ -31,10 +31,17 @@ class PlayerManager {
 
         try {
             const { status, data } = await Axios.get(`https://api.mojang.com/users/profiles/minecraft/${this.player}`);
+            if (status !== 200) {
+                let err = errors[status];
+                if (err) return err;
+                return { status: status || '???', msg: 'An unknown error occured.' };
+            }
             UuidCache.set(this.player, { cachedAt: getCurrentUnix(), ...data });
             return { cachedAt: getCurrentUnix(), status, ...data };
         } catch ({ response: { status } }) {
-            return errors[status];
+            let err = errors[status];
+            if (err) return err;
+            return { status: status || '???', msg: 'An unknown error occured.' };
         }
     }
 
