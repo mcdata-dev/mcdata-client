@@ -72,7 +72,7 @@ module.exports = {
                 },
                 {
                     name: 'Linked Since',
-                    value: user?.linkedSince ? user.linkedSince : '`-`',
+                    value: user?.linkedSince ? `<t:${user.linkedSince}:D>` : '`-`',
                     inline: true
                 },
                 {
