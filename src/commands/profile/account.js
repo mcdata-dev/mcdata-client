@@ -59,6 +59,18 @@ module.exports = {
                     let embed = new EmbedBuilder({
                         title: `${client.e.done}Username Linked | ${data.name}`,
                         description: `The username \`${data.name}\` has been linked.`,
+                        fields: [
+                            {
+                                name: 'Note',
+                                value: 'Yes, it\'s based on trust so there is no verifiaction.., _yet_.\n\nThere are plans to implement verification in the future to prevent trolls.',
+                                inline: true
+                            },
+                            {
+                                name: 'Cooldown',
+                                value: '1 hour `(60 minutes)`',
+                                inline: true
+                            }
+                        ],
                         color: client.c.done,
                         footer: client.config.footer,
                         timestamp: Date.now()
