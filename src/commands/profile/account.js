@@ -5,7 +5,7 @@ module.exports = {
     name: 'account',
     description: '(Un)link your Minecraft username.',
     category: 'profile',
-    // cooldown: 3600000,
+    cooldown: 3600000,
     type: ApplicationCommandType.ChatInput,
     options: [
         {
