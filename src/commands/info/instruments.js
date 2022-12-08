@@ -45,7 +45,7 @@ module.exports = {
                     },
                     {
                         name: 'Materials',
-                        value: i.materials.length > 0 ? i.materials.join(', ') : '`-`',
+                        value: i.materials.length > 0 ? i.materials.join(', ') + `\n\n _[\`More info ↗\`](https://minecraft.fandom.com/wiki/Materials#Blocks)_` : '`-`',
                         inline: true
                     },
                     {
