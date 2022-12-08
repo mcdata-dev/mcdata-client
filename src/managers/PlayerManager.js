@@ -23,10 +23,9 @@ class PlayerManager {
     }
 
     async usernameToUUID() {
-
-        let cached = UuidCache.get(this.player);
+        let cached = UuidCache.find(x => x.name === this.player || x.id === this.player);
         if (cached) {
-            if ((cached.cachedAt + TimeToCache) < Date.now()) UuidCache.delete(this.player);
+            if ((cached.cachedAt + TimeToCache) < Date.now()) UuidCache.delete(cached.name);
             return { status: 200, name: cached.name, id: cached.id, cachedAt: cached.cachedAt };
         }
 
@@ -37,7 +36,7 @@ class PlayerManager {
                 if (err) return err;
                 return { status: status || '???', msg: 'An unknown error occured.' };
             }
-            UuidCache.set(this.player, { cachedAt: getCurrentUnix(), ...data });
+            UuidCache.set(data.name, { cachedAt: getCurrentUnix(), ...data });
             return { cachedAt: getCurrentUnix(), status, ...data };
         } catch ({ response: { status } }) {
             let err = errors[status];
@@ -47,16 +46,15 @@ class PlayerManager {
     }
 
     async UUIDToUsername() {
-
-        let cached = UuidCache.get(this.player);
+        let cached = UuidCache.find(x => x.name === this.player || x.id === this.player);
         if (cached) {
-            if ((cached.cachedAt + TimeToCache) < Date.now()) UuidCache.delete(this.player);
+            if ((cached.cachedAt + TimeToCache) < Date.now()) UuidCache.delete(cached.name);
             return { status: 200, name: cached.name, id: cached.id, cachedAt: cached.cachedAt };
         }
 
         try {
             const { status, data } = await Axios.get(`https://sessionserver.mojang.com/session/minecraft/profile/${this.player}`);
-            UuidCache.set(data.id, { cachedAt: getCurrentUnix(), ...data });
+            UuidCache.set(data.name, { cachedAt: getCurrentUnix(), ...data });
             return { cachedAt: getCurrentUnix(), status, ...data };
         } catch ({ response: { status } }) {
             return errors[status];
