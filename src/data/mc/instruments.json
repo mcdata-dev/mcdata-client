@@ -1,0 +1,188 @@
+{
+    "updated": {
+        "date": "2022-12-08",
+        "majorVersion": "1.19"
+    },
+    "data": [
+        {
+            "name": "Bass (String Bass)",
+            "altNames": [
+                "Bass",
+                "String Bass"
+            ],
+            "tag": "bass",
+            "range": "F♯1/F♯3",
+            "materials": [
+                "Wood"
+            ],
+            "blocks": []
+        },
+        {
+            "name": "Snare Drum",
+            "altNames": [
+                "Snare"
+            ],
+            "tag": "snare",
+            "range": null,
+            "materials": [
+                "Sand",
+                "Gravel",
+                "Concrete Powder"
+            ],
+            "blocks": []
+        },
+        {
+            "name": "Clicks and Sticks (Hihat)",
+            "altNames": [
+                "Clicks and Sticks",
+                "Hihat",
+                "Hat"
+            ],
+            "tag": "hat",
+            "range": null,
+            "materials": [
+                "Glass"
+            ],
+            "blocks": []
+        },
+        {
+            "name": "Bass Drum (Kick)",
+            "altNames": [
+                "Bass Drum",
+                "Basedrum",
+                "Kick"
+            ],
+            "tag": "basedrum",
+            "range": null,
+            "materials": [
+                "Stone"
+            ],
+            "blocks": []
+        },
+        {
+            "name": "Bells (Glockenspiel)",
+            "altNames": [
+                "Bell",
+                "Bells",
+                "Glockenspiel"
+            ],
+            "tag": "bell",
+            "range": "F♯5/F♯7",
+            "materials": [],
+            "blocks": [
+                "Block of Gold"
+            ]
+        },
+        {
+            "name": "Flute",
+            "altNames": [],
+            "tag": "flute",
+            "range": "F♯4/F♯6",
+            "materials": [],
+            "blocks": [
+                "Clay"
+            ]
+        },
+        {
+            "name": "Chimes",
+            "altNames": [
+                "Chime"
+            ],
+            "tag": "chime",
+            "range": "F♯5/F♯7",
+            "materials": [],
+            "blocks": [
+                "Packed Ice"
+            ]
+        },
+        {
+            "name": "Guitar",
+            "altNames": [],
+            "tag": "guitar",
+            "range": "F♯2/F♯4",
+            "materials": [],
+            "blocks": [
+                "Wool"
+            ]
+        },
+        {
+            "name": "Xylophone",
+            "altNames": [],
+            "tag": "xylophone",
+            "range": "F♯5/F♯7",
+            "materials": [],
+            "blocks": [
+                "Bone Block"
+            ]
+        },
+        {
+            "name": "Iron Xylophone (Vibraphone)",
+            "altNames": [
+                "Iron Xylophone",
+                "Vibraphone"
+            ],
+            "tag": "iron_xylophone",
+            "range": "F♯3/F♯5",
+            "materials": [],
+            "blocks": [
+                "Block of Iron"
+            ]
+        },
+        {
+            "name": "Cow Bell",
+            "altNames": [],
+            "tag": "cow_bell",
+            "range": "F♯4/F♯6",
+            "materials": [],
+            "blocks": [
+                "Soul Sand"
+            ]
+        },
+        {
+            "name": "Didgeridoo",
+            "altNames": [],
+            "tag": "didgeridoo",
+            "range": "F♯1/F♯3",
+            "materials": [],
+            "blocks": [
+                "Pumpkin"
+            ]
+        },
+        {
+            "name": "Bit (Square Wave)",
+            "altNames": [
+                "Bit",
+                "Square Wave"
+            ],
+            "tag": "bit",
+            "range": "F♯3/F♯5",
+            "materials": [],
+            "blocks": [
+                "Block of Emerald"
+            ]
+        },
+        {
+            "name": "Banjo",
+            "altNames": [],
+            "tag": "banjo",
+            "range": "F♯3/F♯5",
+            "materials": [],
+            "blocks": [
+                "Hay Bale"
+            ]
+        },
+        {
+            "name": "Pling (Electric Piano)",
+            "altNames": [
+                "Pling",
+                "Electric Piano"
+            ],
+            "tag": "pling",
+            "range": "F♯3/F♯5",
+            "materials": [],
+            "blocks": [
+                "Glowstone"
+            ]
+        }
+    ]
+}
