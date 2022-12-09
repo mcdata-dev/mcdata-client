@@ -1,5 +1,5 @@
 const { ActivityType } = require('discord.js');
-const { UuidCacheInterval, ItemCacheInterval } = require('../managers/CacheManager');
+const { UuidCacheInterval, ItemCacheInterval, ChangelogCacheInterval } = require('../managers/CacheManager');
 const client = require('..');
 
 client.on('ready', () => {
@@ -17,6 +17,7 @@ client.on('ready', () => {
         i++;
     }, 30000);
 
+    ChangelogCacheInterval();
     ItemCacheInterval(client);
     UuidCacheInterval();
 
