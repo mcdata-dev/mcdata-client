@@ -33,8 +33,8 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: 'Website',
-                    value: `[Open Link](https://mcdata.fyxren.com)`,
+                    name: 'Github',
+                    value: `[\`Open Link ↗\`](https://github.com/McData-Development/McData)`,
                     inline: true
                 },
                 {
