@@ -1,6 +1,7 @@
 const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const PlayerManager = require('../../managers/PlayerManager');
 const badges = require('../../data/config/badges');
+const { compareBadges } = require('../../util/functions');
 
 module.exports = {
     name: 'profile',
@@ -57,7 +58,6 @@ module.exports = {
             imageURL = interaction.guild.members.cache.get(user.userId).user.displayAvatarURL({ dynamic: true, size: 2048 });
         }
 
-
         let embed = new EmbedBuilder({
             title: `Profile | ${query ? interaction.guild.members.cache.get(user.userId).user.username : interaction.user.username}`,
             color: client.c.main,
@@ -80,7 +80,7 @@ module.exports = {
                 },
                 {
                     name: 'Badges',
-                    value: user.badges.length > 0 ? getBadges(user.badges) : '`-`',
+                    value: user.badges.length > 0 ? await getBadges(user.badges) : '`-`',
                     inline: true
                 }
             ]
@@ -90,9 +90,9 @@ module.exports = {
 };
 
 function getBadges(list) {
-    let arr = [];
-    list.forEach((val) => {
-        arr.push(badges.data.find(x => x.id === val.badge).badge);
-    });
-    return arr.join(' ');
+    const arr = list.map(val => badges.data.find(x => x.id === val.badge));
+    return arr
+        .sort((a, b) => a.level < b.level ? -1 : 1)
+        .map(x => x.badge)
+        .join(' ');
 }
