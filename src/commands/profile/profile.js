@@ -25,13 +25,13 @@ module.exports = {
         if (query && query !== interaction.user.id) {
             user = await client.prisma.profile.findUnique({
                 where: { userId: query },
-                include: { badges: true }
+                include: { badge: true }
             });
             if (!user) return interaction.reply(client.embeds.fail('This user does not have a profile yet.'));
         } else {
             user = await client.prisma.profile.findUnique({
                 where: { userId: interaction.user.id },
-                include: { badges: true }
+                include: { badge: true }
             });
             if (!user) {
                 try {
@@ -80,7 +80,7 @@ module.exports = {
                 },
                 {
                     name: 'Badges',
-                    value: user.badges.length > 0 ? await getBadges(user.badges) : '`-`',
+                    value: user.badge.length > 0 ? await getBadges(user.badge) : '`-`',
                     inline: true
                 }
             ]
