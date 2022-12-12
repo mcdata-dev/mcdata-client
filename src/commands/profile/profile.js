@@ -57,7 +57,7 @@ module.exports = {
         } else {
             imageURL = interaction.guild.members.cache.get(user.userId).user.displayAvatarURL({ dynamic: true, size: 2048 });
         }
-
+        console.log(user);
         let embed = new EmbedBuilder({
             title: `Profile | ${query ? interaction.guild.members.cache.get(user.userId).user.username : interaction.user.username}`,
             color: client.c.main,
