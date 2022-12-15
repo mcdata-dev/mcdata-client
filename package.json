@@ -1,5 +1,5 @@
 {
-  "name": "McData",
+  "name": "mcdata",
   "version": "3.0.0",
   "description": "Minecraft data, in Discord.",
   "main": "./src/index.js",

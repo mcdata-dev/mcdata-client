@@ -1,0 +1,21 @@
+name: Test & Run codebase
+
+on:
+  pull_request:
+    branches:
+      - "main"
+      - "dev"
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.JS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.2
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Run ESLint
+        run: yarn run eslint --if-present
