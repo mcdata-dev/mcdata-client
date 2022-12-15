@@ -60,8 +60,8 @@ module.exports = {
 
         } else {
             let embed = new EmbedBuilder({
-                title: `Amount`,
-                description: '> _User \`/badges [badge]\` to get a little more information._',
+                title: 'Amount',
+                description: '> _User `/badges [badge]` to get a little more information._',
                 color: client.c.main,
                 thumbnail: {
                     url: client.config.logo

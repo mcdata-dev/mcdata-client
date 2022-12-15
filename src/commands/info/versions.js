@@ -60,7 +60,7 @@ module.exports = {
             });
 
             let embed = new EmbedBuilder({
-                title: `Versions`,
+                title: 'Versions',
                 color: client.c.main,
                 thumbnail: {
                     url: client.config.logo

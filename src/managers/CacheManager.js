@@ -1,4 +1,4 @@
-const { Collection } = require("discord.js");
+const { Collection } = require('discord.js');
 const ClearIntervals = {
     changelog: 60_000,  //? 1m
     item: 8_640_000,    //? 24h
@@ -15,7 +15,7 @@ module.exports.ChangelogCacheInterval = () => setInterval(() => {
 // Item
 module.exports.ItemCache = new Collection();
 module.exports.ItemCacheInterval = (client) => setInterval(() => {
-    client.logger.info(`Cleared ItemCache`, `CacheManager`);
+    client.logger.info('Cleared ItemCache', 'CacheManager');
     this.ItemCache.clear();
 }, ClearIntervals.item);
 

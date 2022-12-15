@@ -15,9 +15,9 @@ module.exports = {
         if (cached) {
             cl = cached;
         } else {
-            const { status, data } = await Axios.get(`https://api.github.com/repos/McData-Development/McData/releases/latest`);
+            const { status, data } = await Axios.get('https://api.github.com/repos/McData-Development/McData/releases/latest');
             if (status !== 200) {
-                client.logger.error(`changelog.js`, `Error while fetching latest release.\nStatus:${status}\nData:`, data);
+                client.logger.error('changelog.js', `Error while fetching latest release.\nStatus:${status}\nData:`, data);
                 return interaction.reply(client.embeds.error);
             } else {
                 ChangelogCache.set('latest', data);

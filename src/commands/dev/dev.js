@@ -1,4 +1,4 @@
-const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
+const { ApplicationCommandType, ApplicationCommandOptionType } = require('discord.js');
 const badges = require('../../data/config/badges');
 
 module.exports = {
@@ -116,11 +116,10 @@ module.exports = {
         let query = interaction.options.data[0];
 
         switch (query.name) {
-            case 'badge':
+            case 'badge': {
                 let data = query.options[0];
                 switch (data.name) {
-                    case 'add':
-
+                    case 'add': {
                         if (!badges.list.includes(data.options[1].value.toLowerCase())) return interaction.reply(client.embeds.fail('This badge does not exist'));
                         let hasBadge = await client.prisma.badge.findFirst({ where: { userId: data.options[0].value, badge: data.options[1].value } });
                         if (hasBadge) return interaction.reply(client.embeds.fail(`<@${hasBadge.userId}> already has the \`${hasBadge.badge}\` badge.`));
@@ -135,7 +134,7 @@ module.exports = {
                                     }
                                 });
                             } catch (e) {
-                                client.logger.error(`dev.js`, `Error while trying to create a new profile: ${e}`);
+                                client.logger.error('dev.js', `Error while trying to create a new profile: ${e}`);
                                 return interaction.reply(client.embeds.error);
                             }
                         }
@@ -148,14 +147,14 @@ module.exports = {
                             });
 
                         } catch (e) {
-                            client.logger.error(`dev.js`, `Error while trying to give a badge: ${e}`);
+                            client.logger.error('dev.js', `Error while trying to give a badge: ${e}`);
                             return interaction.reply(client.embeds.error);
                         }
 
                         if (!hasProfile) return interaction.reply(client.embeds.done(`Profile created for <@${data.options[0].value}> & the \`${data.options[1].value}\` badge has been given.`));
                         else return interaction.reply(client.embeds.done(`<@${data.options[0].value}> has been give the \`${data.options[1].value}\` badge.`));
-
-                    case 'remove':
+                    }
+                    case 'remove': {
                         if (!badges.list.includes(data.options[1].value.toLowerCase())) return interaction.reply(client.embeds.fail('This badge does not exist'));
                         let checkBadge = await client.prisma.badge.findFirst({ where: { userId: data.options[0].value, badge: data.options[1].value } });
                         if (!checkBadge) return interaction.reply(client.embeds.fail(`<@${data.options[0].value}> does not have the \`${data.options[1].value}\` badge.`));
@@ -168,14 +167,15 @@ module.exports = {
                             });
                             return interaction.reply(client.embeds.done(`The \`${data.options[1].value}\` badge has been removed from <@${data.options[0].value}>.`));
                         } catch (e) {
-                            client.logger.error(`dev.js`, `Error while trying to remove a badge: ${e}`);
+                            client.logger.error('dev.js', `Error while trying to remove a badge: ${e}`);
                             return interaction.reply(client.embeds.error);
                         }
-                };
+                    }
+                }
 
                 break;
-
-            case 'reload':
+            }
+            case 'reload': {
                 let givenCmd = query.options[0];
                 let command = client.commands.get(givenCmd.value);
                 if (!command) return interaction.reply(client.embeds.fail('This command does not exist.'));
@@ -191,9 +191,10 @@ module.exports = {
                     client.commands.set(newCmd.name, newCmd);
                     return interaction.reply(client.embeds.done(`Reloaded \`${givenCmd.value}\``));
                 } catch (e) {
-                    client.logger.error(`dev.js`, `Error while trying to reload the command ${command.name}: ${e}`);
+                    client.logger.error('dev.js', `Error while trying to reload the command ${command.name}: ${e}`);
                     return interaction.reply(client.embeds.fail(`Failed while trying to reload \`${givenCmd.value}\``));
                 }
+            }
 
 
             /*

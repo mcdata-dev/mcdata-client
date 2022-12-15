@@ -24,7 +24,7 @@ module.exports = {
                 x.tag === query ||
                 x.chatCode === query ||
                 x.motdCode === query ||
-                `\\` + x.motdCode === query);
+                '\\' + x.motdCode === query);
             if (!fc) return interaction.reply(client.embeds.fail('This formatcode does not exist.'));
 
             let embed = new EmbedBuilder({
@@ -43,7 +43,7 @@ module.exports = {
                     },
                     {
                         name: 'MotdCode',
-                        value: `\\` + fc.motdCode,
+                        value: '\\' + fc.motdCode,
                         inline: true
                     },
                     {
@@ -62,7 +62,7 @@ module.exports = {
             await formatCodes.data.forEach(val => arr.push(`\`${val.name}\``));
 
             let embed = new EmbedBuilder({
-                title: `FormatCodes`,
+                title: 'FormatCodes',
                 color: client.c.main,
                 thumbnail: {
                     url: client.config.logo

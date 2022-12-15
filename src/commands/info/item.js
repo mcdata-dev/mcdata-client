@@ -4,7 +4,7 @@ const Axios = require('axios');
 
 module.exports = {
     name: 'item',
-    description: "Get information about an item.",
+    description: 'Get information about an item.',
     category: 'info',
     type: ApplicationCommandType.ChatInput,
     options: [
@@ -22,7 +22,7 @@ module.exports = {
         if (cached) {
             let embed = new EmbedBuilder({
                 title: `Item | ${cached.name}`,
-                description: `> _This will be expanded with more data in the future._`,
+                description: '> _This will be expanded with more data in the future._',
                 url: 'https://minecraft-ids.grahamedgecombe.com/',
                 color: client.c.main,
                 thumbnail: {
@@ -58,7 +58,7 @@ module.exports = {
             ItemCache.set(data.name, data);
             let embed = new EmbedBuilder({
                 title: `Item | ${data.name}`,
-                description: `> _This will be expanded with more data in the future._`,
+                description: '> _This will be expanded with more data in the future._',
                 url: 'https://minecraft-ids.grahamedgecombe.com/',
                 color: client.c.main,
                 thumbnail: {
@@ -86,7 +86,7 @@ module.exports = {
             });
             return interaction.reply({ embeds: [embed] });
         }).catch(e => {
-            client.logger.error(`item.js`, `Error while trying to fetch the items: ${e}`);
+            client.logger.error('item.js', `Error while trying to fetch the items: ${e}`);
             return interaction.reply(client.embeds.error);
         });
     }

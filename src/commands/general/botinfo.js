@@ -34,7 +34,7 @@ module.exports = {
                 },
                 {
                     name: 'Github',
-                    value: `[\`Open Link ↗\`](https://github.com/McData-Development/McData)`,
+                    value: '[`Open Link ↗`](https://github.com/McData-Development/McData)',
                     inline: true
                 },
                 {

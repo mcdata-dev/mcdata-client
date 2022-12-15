@@ -2,7 +2,7 @@ const { ApplicationCommandType } = require('discord.js');
 
 module.exports = {
     name: 'ping',
-    description: "Check the ping.",
+    description: 'Check the ping.',
     category: 'general',
     type: ApplicationCommandType.ChatInput,
     cooldown: 5000,
@@ -10,7 +10,7 @@ module.exports = {
         let embed = {
             description: `🏓 Discord Websocket Latency: \`${Math.round(client.ws.ping)} ms\``,
             color: client.c.main
-        }
+        };
         interaction.reply({ embeds: [embed] });
     }
 };

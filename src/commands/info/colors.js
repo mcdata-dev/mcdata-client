@@ -24,9 +24,9 @@ module.exports = {
                 x.tag === query ||
                 x.chatCode === query ||
                 x.motdCode === query ||
-                `\\` + x.motdCode === query ||
+                '\\' + x.motdCode === query ||
                 x.hexCode === query ||
-                `#` + x.hexCode === query);
+                '#' + x.hexCode === query);
             if (!c) return interaction.reply(client.embeds.fail('This color does not exist.'));
 
             let embed = new EmbedBuilder({
@@ -45,7 +45,7 @@ module.exports = {
                     },
                     {
                         name: 'MotdCode',
-                        value: `\\` + c.motdCode,
+                        value: '\\' + c.motdCode,
                         inline: true
                     },
                     {
@@ -64,7 +64,7 @@ module.exports = {
             await colors.data.forEach(val => arr.push(`\`${val.name}\``));
 
             let embed = new EmbedBuilder({
-                title: `Colors`,
+                title: 'Colors',
                 color: client.c.main,
                 thumbnail: {
                     url: client.config.logo
