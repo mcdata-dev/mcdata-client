@@ -18,4 +18,4 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Run ESLint
-        run: yarn run eslint --if-present
+        run: yarn run eslint
