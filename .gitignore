@@ -9,4 +9,4 @@ node_modules/
 .idea/
 .fleet/
 
-yarn-error.lgo
+yarn-error.log
