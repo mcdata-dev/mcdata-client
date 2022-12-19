@@ -4,8 +4,11 @@
   "description": "Minecraft data, in Discord.",
   "main": "./src/index.js",
   "repository": "https://github.com/McData-Development/Discord-Client",
+  "bugs": {
+    "url": "https://github.com/McData-Development/McData/issues"
+  },
   "author": "Fyxren",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "scripts": {
     "dev": "nodemon ./src/index.js",
     "start": "node ./src/index.js",
