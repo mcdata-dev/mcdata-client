@@ -7,14 +7,14 @@ module.exports = {
     type: ApplicationCommandType.ChatInput,
     run: async (client, interaction) => {
         let embed = {
-            title: `\`[REMOVED]\` History`,
+            title: '`[REMOVED]` History',
             color: client.c.fail,
             thumbnail: {
                 url: client.config.logo
             },
             footer: client.config.footer,
             timestamp: Date.now(),
-            description: `Mojang removed the ability to receive the name history to "**improve player safety and data privacy**".\n\nThis means that this command is not available anymore and will get removed in the future.`,
+            description: 'Mojang removed the ability to receive the name history to "**improve player safety and data privacy**".\n\nThis means that this command is not available anymore and will get removed in the future.',
             fields: [
                 {
                     name: 'Official Announcement',

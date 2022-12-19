@@ -8,7 +8,7 @@ module.exports.loading = {
             color: c.pending,
         }
     ]
-}
+};
 
 module.exports.cooldown = (duration) => {
     return {
@@ -18,8 +18,8 @@ module.exports.cooldown = (duration) => {
                 color: c.pending
             }
         ]
-    }
-}
+    };
+};
 
 module.exports.fail = (desc) => {
     return {
@@ -29,8 +29,8 @@ module.exports.fail = (desc) => {
                 color: c.fail
             }
         ]
-    }
-}
+    };
+};
 
 module.exports.error = {
     embeds: [
@@ -39,7 +39,7 @@ module.exports.error = {
             color: c.error
         }
     ]
-}
+};
 
 module.exports.done = (desc) => {
     return {
@@ -49,5 +49,5 @@ module.exports.done = (desc) => {
                 color: c.done
             }
         ]
-    }
-}
+    };
+};

@@ -1,7 +1,6 @@
 const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const PlayerManager = require('../../managers/PlayerManager');
 const badges = require('../../data/config/badges');
-const { compareBadges } = require('../../util/functions');
 
 module.exports = {
     name: 'profile',

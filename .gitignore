@@ -1,3 +1,12 @@
-node_modules
-yarn.lock
+# Dependencies
+node_modules/
+
+# Production
 .env
+
+# Misc
+.vscode/
+.idea/
+.fleet/
+
+yarn-error.log

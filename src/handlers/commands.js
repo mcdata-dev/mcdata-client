@@ -24,7 +24,7 @@ module.exports = (client) => {
             if (cmd.name) {
                 client.commands.set(cmd.name, cmd);
             } else {
-                client.logger.error(`commands.js`, `Failed to load ${file.split('.js')[0]}`);
+                client.logger.error('commands.js', `Failed to load ${file.split('.js')[0]}`);
             }
 
         }
@@ -35,11 +35,11 @@ module.exports = (client) => {
             await rest.put(process.env.GUILD_ID ?
                 Routes.applicationGuildCommands(process.env.BOT_ID, process.env.GUILD_ID) :
                 Routes.applicationCommands(process.env.BOT_ID),
-                { body: commands }
+            { body: commands }
             );
-            client.logger.info(`Application(/) commands registered`);
+            client.logger.info('Application(/) commands registered');
         } catch (e) {
-            client.logger.error(`Handlers`, `Failed to register application (/) commands: ${e}`);
+            client.logger.error('Handlers', `Failed to register application (/) commands: ${e}`);
         }
     })();
 };

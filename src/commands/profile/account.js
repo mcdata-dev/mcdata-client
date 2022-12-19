@@ -1,6 +1,7 @@
 const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const { getCurrentUnix } = require('../../util/functions');
 const PlayerManager = require('../../managers/PlayerManager');
+
 module.exports = {
     name: 'account',
     description: '(Un)link your Minecraft username.',
@@ -41,7 +42,7 @@ module.exports = {
 
         let query = interaction.options.data[0];
         switch (query.name) {
-            case 'link':
+            case 'link': {
                 let player = new PlayerManager(query.options[0].value);
                 player.usernameToUUID().then(async (data) => {
                     if (data.status !== 200) return interaction.reply(client.embeds.fail(`\`[${data.status}]\` ${data.msg}`));
@@ -52,7 +53,7 @@ module.exports = {
                             create: { userId: interaction.user.id, uuid: data.id, linkedSince: getCurrentUnix() },
                         });
                     } catch (e) {
-                        client.logger.error(`account.js`, `Error while creating/updating a profile: ${e}`);
+                        client.logger.error('account.js', `Error while creating/updating a profile: ${e}`);
                         return interaction.reply(client.embeds.error);
                     }
 
@@ -79,8 +80,8 @@ module.exports = {
                     return interaction.reply({ embeds: [embed] });
                 });
                 break;
-            case 'unlink':
-
+            }
+            case 'unlink': {
                 let user = await client.prisma.profile.findUnique({
                     where: { userId: interaction.user.id }
                 });
@@ -98,11 +99,12 @@ module.exports = {
                             linkedSince: null
                         }
                     });
-                    return interaction.reply(client.embeds.done(`Your Minecraft account has been unlinked from your account.`));
+                    return interaction.reply(client.embeds.done('Your Minecraft account has been unlinked from your account.'));
                 } catch (e) {
-                    client.logger.error(`account.js`, `Error while trying to remove the uuid & linkedSince from profile: ${e}`);
+                    client.logger.error('account.js', `Error while trying to remove the uuid & linkedSince from profile: ${e}`);
                     return interaction.reply(client.embeds.error);
                 }
+            }
         }
     }
 };

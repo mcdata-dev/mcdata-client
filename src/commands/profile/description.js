@@ -1,4 +1,4 @@
-const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
+const { ApplicationCommandType, ApplicationCommandOptionType } = require('discord.js');
 
 module.exports = {
     name: 'description',
@@ -62,6 +62,6 @@ module.exports = {
                 } catch (e) {
                     return interaction.reply(client.embeds.error);
                 }
-        };
+        }
     }
 };

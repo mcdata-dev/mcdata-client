@@ -1,5 +1,4 @@
 const { ApplicationCommandType, ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
-const fs = require('fs');
 
 module.exports = {
     name: 'help',
@@ -24,7 +23,7 @@ module.exports = {
 
             let embed = new EmbedBuilder({
                 title: `Help | ${cmd.name}`,
-                description: `> _* = required argument_`,
+                description: '> _* = required argument_',
                 color: client.c.main,
                 thumbnail: {
                     url: client.config.logo
