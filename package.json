@@ -3,9 +3,9 @@
   "version": "3.0.0",
   "description": "Minecraft data, in Discord.",
   "main": "./src/index.js",
-  "repository": "https://github.com/McData-Development/Discord-Client",
+  "repository": "https://github.com/McData-Development/mcdata-discord-client",
   "bugs": {
-    "url": "https://github.com/McData-Development/McData/issues"
+    "url": "https://github.com/McData-Development/mcdata-discord-client/issues"
   },
   "author": "Fyxren",
   "license": "GPL-3.0",
