@@ -38,7 +38,7 @@ module.exports = {
                     },
                     {
                         name: 'Major Name',
-                        value: v.majorName,
+                        value: v.majorName ? v.majorName : '`-`',
                         inline: true
                     },
                     {
