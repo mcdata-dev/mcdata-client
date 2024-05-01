@@ -1,0 +1,24 @@
+{
+  "name": "mcdata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^1.7.0",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "tsx": "^4.7.1"
+  }
+}
