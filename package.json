@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/builders": "^1.7.0",
+    "@mcdata/data": "^1.0.3",
     "discord.js": "^14.14.1",
     "dotenv": "^16.4.4"
   },

@@ -8,6 +8,9 @@ dependencies:
   '@discordjs/builders':
     specifier: ^1.7.0
     version: 1.7.0
+  '@mcdata/data':
+    specifier: ^1.0.3
+    version: 1.0.3
   discord.js:
     specifier: ^14.14.1
     version: 14.14.1
@@ -303,6 +306,10 @@ packages:
   /@fastify/busboy@2.1.0:
     resolution: {integrity: sha512-+KpH+QxZU7O4675t3mnkQKcZZg56u+K/Ct2K+N2AZYNVK8kyeo/bI18tI8aPm3tvNNRyTWfj6s5tnGNlcbQRsA==}
     engines: {node: '>=14'}
+    dev: false
+
+  /@mcdata/data@1.0.3:
+    resolution: {integrity: sha512-fLfHnmvPhZJFn3IsbMaxa2w3EwHgyvTLlKf4Y39ZKH9FNc4jQVoj+iFm9z1Twy4R2qX5OXzG37Hbhx2jA++Cvw==}
     dev: false
 
   /@sapphire/async-queue@1.5.2:
