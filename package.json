@@ -19,7 +19,9 @@
     "dotenv": "^16.4.4"
   },
   "devDependencies": {
+    "@prisma/client": "5.16.1",
     "@types/node": "^20.11.19",
+    "prisma": "^5.16.1",
     "tsx": "^4.7.1"
   }
 }

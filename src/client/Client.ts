@@ -1,4 +1,5 @@
 import { Client } from 'discord.js';
+import { PrismaClient } from '@prisma/client'
 import { join } from 'path';
 import CommandManager from '../managers/CommandManager';
 import EventManager from '../managers/EventManager';
@@ -12,6 +13,7 @@ class McClient extends Client {
     config = config;
     colors = config.colors;
     emotes = config.emotes;
+    prisma = new PrismaClient();
 
     constructor(options: any) {
         super(options);
