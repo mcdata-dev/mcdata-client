@@ -1,6 +1,7 @@
-import { EmbedBuilder, SlashCommandBuilder } from 'discord.js';
+import { ChatInputCommandInteraction, EmbedBuilder, SlashCommandBuilder } from 'discord.js';
 import CommandBase from '../../utils/CommandBase';
 import { version } from '../../../package.json';
+import McClient from '../../client/Client';
 
 export default class Info extends CommandBase {
     constructor() {
@@ -10,7 +11,7 @@ export default class Info extends CommandBase {
         );
     }
 
-    async execute(client: any, interaction: any) {
+    async execute(client: McClient, interaction: ChatInputCommandInteraction) {
         const embed = new EmbedBuilder({
             title: 'Bot Information',
             description: `> _Minecraft data, in Discord._`,
@@ -21,7 +22,7 @@ export default class Info extends CommandBase {
             fields: [
                 {
                     name: 'Username',
-                    value: client.user.username,
+                    value: client.user!.username,
                     inline: true
                 },
                 {
@@ -31,7 +32,7 @@ export default class Info extends CommandBase {
                 },
                 {
                     name: 'Guilds',
-                    value: client.guilds.cache.size,
+                    value: client.guilds.cache.size.toString(),
                     inline: true
                 },
                 {

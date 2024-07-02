@@ -1,5 +1,6 @@
-import { EmbedBuilder, SlashCommandBuilder } from 'discord.js';
+import { ChatInputCommandInteraction, EmbedBuilder, SlashCommandBuilder } from 'discord.js';
 import CommandBase from '../../utils/CommandBase';
+import McClient from '../../client/Client';
 
 export default class Ping extends CommandBase {
     constructor() {
@@ -9,7 +10,7 @@ export default class Ping extends CommandBase {
         );
     }
 
-    async execute(client: any, interaction: any) {
+    async execute(client: McClient, interaction: ChatInputCommandInteraction) {
         const embed = new EmbedBuilder({
             title: 'Pong!',
             description: `Latency is ${Date.now() - interaction.createdTimestamp}ms.`
