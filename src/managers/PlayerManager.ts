@@ -15,6 +15,18 @@ class PlayerManager {
         return `https://minotar.net/helm/${this.player}.png`
     }
 
+    get getHead() {
+        return `https://minotar.net/cube/${this.player}.png`
+    }
+
+    get getBody() {
+        return `https://minotar.net/armor/body/${this.player}.png`
+    }
+
+    get getDownloadReady() {
+        return `https://minotar.net/download/${this.player}.png`
+    }
+
     async getUsername(): Promise<string> {
         return (await this.uuidToUsername()).name;
     }
