@@ -48,13 +48,21 @@ export default class Profile extends CommandBase {
         const badges: string[] = [];
         if (profile.flags > 0) flags.list().forEach((flag: string) => badges.push(flagToBadgeMapping[flag]));
 
+        let accountName;
+        let account = await player.getAccount();
+        if ('error' in account) {
+            accountName = '`❌ - /account add`';
+        } else {
+            accountName = account.name;
+        }
+
         let embed = new EmbedBuilder({
             title: `Profile | ${user.globalName}`,
             description: profile.description || '_No description set._',
             fields: [
                 {
                     name: 'Minecraft Username',
-                    value: await player.getUsername() ?? '`❌ - /account add`',
+                    value: accountName,
                     inline: true
                 },
                 {
