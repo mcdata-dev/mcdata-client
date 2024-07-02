@@ -2,7 +2,7 @@ import { ChatInputCommandInteraction, EmbedBuilder, SlashCommandBuilder } from '
 import CommandBase from '../../utils/CommandBase';
 import McClient from '../../client/Client';
 
-export default class Ping extends CommandBase {
+export default class Description extends CommandBase {
     constructor() {
         super(new SlashCommandBuilder()
             .setName('description')

@@ -11,7 +11,7 @@ const flagToBadgeMapping = {
     FRIEND: '<:mc_friend:1046521030627299378>'
 } as any;
 
-export default class Ping extends CommandBase {
+export default class Profile extends CommandBase {
     constructor() {
         super(new SlashCommandBuilder()
             .setName('profile')
