@@ -10,3 +10,13 @@ export interface MojangAccount {
     name: string;
     [key: string]: any;
 }
+
+export interface MojangErrorResponse {
+    path: string;
+    errorMessage: string;
+}
+
+export interface ApiError {
+    error: number,
+    message: string;
+}
