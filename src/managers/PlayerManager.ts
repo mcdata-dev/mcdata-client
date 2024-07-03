@@ -39,10 +39,15 @@ class PlayerManager {
         const data = await this.fetchUuidFromUsername();
         if ('error' in data) return data;
 
-        PlayerManager.usernameToUuidCache.set(this.player, data);
-        PlayerManager.uuidToUsernameCache.set(data.id, data);
+        const finalData = {
+            id: data.id,
+            name: data.name
+        }
 
-        return data;
+        PlayerManager.usernameToUuidCache.set(this.player, finalData);
+        PlayerManager.uuidToUsernameCache.set(finalData.id, finalData);
+
+        return finalData;
     }
 
     async uuidToUsername(): Promise<MojangAccount | ApiError> {
@@ -52,10 +57,15 @@ class PlayerManager {
         const data = await this.fetchUsernameFromUuid();
         if ('error' in data) return data;
 
-        PlayerManager.uuidToUsernameCache.set(this.player, data);
-        PlayerManager.usernameToUuidCache.set(data.name, data);
+        const finalData = {
+            id: data.id,
+            name: data.name
+        }
 
-        return data;
+        PlayerManager.uuidToUsernameCache.set(this.player, finalData);
+        PlayerManager.usernameToUuidCache.set(finalData.name, finalData);
+
+        return finalData;
 
     }
 
