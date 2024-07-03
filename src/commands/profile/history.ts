@@ -26,10 +26,15 @@ export default class History extends CommandBase {
                 },
                 {
                     name: 'Since when?',
-                    value: '<t:1663053900:R>_',
+                    value: '<t:1663053900:R>',
                     inline: true
                 }
-            ]
+            ],
+            footer: {
+                text: 'McData',
+                iconURL: client.config.icon
+            },
+            timestamp: new Date()
         })
 
         return interaction.reply({ embeds: [embed] });
